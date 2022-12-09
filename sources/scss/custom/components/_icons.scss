@@ -1,0 +1,46 @@
+/** @section Icons */
+
+// Base styles
+.icon {
+	display: inline-block;
+	font-size: 24px;
+	line-height: 1;
+	&:hover{
+		color: $white;
+	}
+
+	&::before {
+		position: relative;
+		display: inline-block;
+		font-weight: 400;
+		font-style: normal;
+		speak: none;
+		text-transform: none;
+	}
+}
+
+// Alternate icons
+.icon-default {
+	color: $custom-blue-2;
+}
+
+.icon-primary {}
+
+// Icon Shapes
+.icon-circle {
+	border-radius: 50%;
+}
+
+// Icon Sizes
+.icon-xs {}
+
+.icon-sm {
+
+}
+
+.icon-lg {}
+
+
+* + .icon{
+	margin-left: 30px;
+}

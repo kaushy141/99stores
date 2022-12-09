@@ -1,0 +1,61 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Contacts'
+
+block page
+	include ../sections/_header-classic
+	section.section-lg.bg-secondary
+		.container.wide
+			.text-center
+				h1 Contacts
+				.subtitle-2 Lorem ipsum dolor sit amet, consectetur
+
+	//Mailform
+	section.section.section-xl
+		.container.wide
+			.row.row-50
+				.col-lg-4
+					.contacts-wrap
+						p Phone Number
+						.phone-link-second
+							a( href= 'tel:#' ) 1 000-234-78-90
+						.phone-link-second
+							a( href= 'tel:#' ) 1 000-234-78-90
+						p Location
+						span 3674 Harrison Street, San Francisco, 94143,CA, USA.
+				.col-lg-8
+					h3 Make an Appointment
+					form.rd-form.rd-form-2.rd-mailform(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.row.row-40.row-md-60
+							.col-md-6
+								.form-wrap
+									input#contact-name.form-input(type='text' name='name' data-constraints='@Required')
+									label.form-label(for='contact-name') Enter your name:
+
+							.col-md-6
+								.form-wrap
+									input#contact-phone.form-input(type='text' name='phone' data-constraints='@Numeric')
+									label.form-label(for='contact-phone') Enter your phone:
+
+							.col-md-6
+								.form-wrap.form-wrap-select
+									select.form-input.select(name='find-job-location' data-minimum-results-for-search="Infinity")
+										option(value='1') Select a service
+										option(value='2') Swedish Relaxation
+										option(value='3') Remedial Deep Tissue
+										option(value='4') Group Bookings
+
+							.col-md-6
+								.form-wrap.form-wrap-select
+									select.form-input.select(name='find-job-location' data-minimum-results-for-search="Infinity")
+										option(value='1') Select a Date
+										option(value='2') May 15, 2020
+										option(value='3') June 05, 2020
+										option(value='4') August 21, 2020
+
+							.col-md-6
+								button.button.button-secondary.button-md(type='submit') Leave a Request
+
+
+	include ../sections/_footer-classic

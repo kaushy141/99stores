@@ -1,0 +1,71 @@
+extends ../_skeleton
+include ../components/card
+block variables
+	- pageName = 'About'
+
+block page
+	include ../sections/_header-classic
+
+	.section.section-lg.bg-secondary
+		.container
+			.text-center
+				h1 About Us
+				.subtitle-2 Lorem ipsum dolor sit amet, consectetur
+
+
+	.section.section-lg.bg-default
+		.container
+				.about-wrap
+					.subtitle A few words about Beautyrel
+					.row.row-sm-30
+						.col-lg-6
+							h2.title Delivering the <br class="br-none"> Best Massage
+						.col-lg-6
+							.text-wrap-about.mt-md-3.mt-sm-3
+								p.big Heu. Heu. Sunt abactuses examinare lotus, festus lunaes. Cobaltums ire in clemens brigantium! Cum gemna trabem, omnes idoleumes consumere secundus, teres castores. Nunquam imperium candidatus. Cum fluctui peregrinationes, omnes humani generises talem nobilis, pius homoes,
+					.row.row-sm-30
+						.col-lg-12.mt-lg-3
+							+video-box({
+								"background": "video-prev-1050x591.jpg",
+								"link": "https://www.youtube.com/watch?v=NxPbcuUZcL0"
+							})
+
+
+	.section.section.section-xl.bg-secondary
+		.container.wide
+			.text-center
+				h2.title Our dedicated team
+				.subtitle-2.big Nulla id nibh at neque aliquet feugiat id sed nibh.
+			.row.row-md-30.row-sm-50
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern.box-md
+						.box-info-modern-figure
+							+img( 'team-1-390x360' )
+						h4.box-info-modern-title Evan Johnson
+						.box-info-modern-text Founder, massage therapist
+
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern.box-md
+						.box-info-modern-figure
+							+img( 'team-2-390x360' )
+						h4.box-info-modern-title Janet Smith
+						.box-info-modern-text Deep tissue massage therapist
+
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern.box-md
+						.box-info-modern-figure
+							+img( 'team-3-390x360' )
+						h4.box-info-modern-title Peter Wilson
+						.box-info-modern-text Aromatherapy massage therapist
+
+	.section.section-custom
+		.container.wide
+			.text-center
+				h2.title Are You a Qualified <br class="br-none"> Massage Therapist?
+				.subtitle-2.big We are waiting for you to join our team
+				.row.justify-content-center
+					a.button.button-secondary.button-md(href='#') Join Us
+				.img-wrap
+					+img('home-4-830x446')
+
+	include ../sections/_footer-classic

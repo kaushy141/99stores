@@ -1,0 +1,288 @@
+CRITICAL - 2022-12-02 07:28:54 --> Call to a member function model() on null
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:31:28 --> Call to a member function model() on null
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:33:52 --> Call to a member function model() on null
+in APPPATH\Controllers\Auth.php on line 8.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:34:50 --> Call to a member function model() on null
+in APPPATH\Controllers\Auth.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:35:58 --> Cannot call constructor
+in APPPATH\Controllers\MyController.php on line 19.
+ 1 APPPATH\Controllers\Auth.php(8): App\Controllers\MyController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:39:43 --> Call to a member function model() on null
+in APPPATH\Controllers\Auth.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:40:48 --> Call to a member function model() on null
+in APPPATH\Controllers\Auth.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:40:59 --> Call to a member function model() on null
+in APPPATH\Controllers\Auth.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:56:05 --> Declaration of App\Controllers\Auth::initController() should be compatible with App\Controllers\MyController::initController(CodeIgniter\HTTP\RequestInterface $request, CodeIgniter\HTTP\ResponseInterface $response, Psr\Log\LoggerInterface $logger)
+in APPPATH\Controllers\Auth.php on line 7.
+ 1 APPPATH\Controllers\Auth.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Declaration of App\\Controllers\\Auth::initController() should be compatible with App\\Controllers\\MyController::initController(CodeIgniter\\HTTP\\RequestInterface $request, CodeIgniter\\HTTP\\ResponseInterface $response, Psr\\Log\\LoggerInterface $logger)', 'APPPATH\\Controllers\\Auth.php', 7, [...])
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(282): include_once('APPPATH\\Controllers\\Auth.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Auth.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 6 [internal function]: spl_autoload_call('App\\Controllers\\Auth')
+ 7 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Auth', true)
+ 8 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:56:38 --> Call to a member function createAccount() on null
+in APPPATH\Controllers\Auth.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:56:56 --> Call to a member function model() on null
+in APPPATH\Controllers\Auth.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:57:12 --> Cannot call constructor
+in APPPATH\Controllers\Auth.php on line 8.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:57:59 --> Could not check compatibility between App\Controllers\Auth::initController(App\Controllers\RequestInterface $request, App\Controllers\ResponseInterface $response, App\Controllers\LoggerInterface $logger) and App\Controllers\MyController::initController(CodeIgniter\HTTP\RequestInterface $request, CodeIgniter\HTTP\ResponseInterface $response, Psr\Log\LoggerInterface $logger), because class App\Controllers\LoggerInterface is not available
+in APPPATH\Controllers\Auth.php on line 7.
+ 1 APPPATH\Controllers\Auth.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Could not check compatibility between App\\Controllers\\Auth::initController(App\\Controllers\\RequestInterface $request, App\\Controllers\\ResponseInterface $response, App\\Controllers\\LoggerInterface $logger) and App\\Controllers\\MyController::initController(CodeIgniter\\HTTP\\RequestInterface $request, CodeIgniter\\HTTP\\ResponseInterface $response, Psr\\Log\\LoggerInterface $logger), because class App\\Controllers\\LoggerInterface is not available', 'APPPATH\\Controllers\\Auth.php', 7, [...])
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(282): include_once('APPPATH\\Controllers\\Auth.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Auth.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 6 [internal function]: spl_autoload_call('App\\Controllers\\Auth')
+ 7 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Auth', true)
+ 8 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 07:58:37 --> Call to a member function model() on null
+in APPPATH\Controllers\Auth.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\Auth->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:01:03 --> Cannot call constructor
+in APPPATH\Controllers\MyController.php on line 23.
+ 1 APPPATH\Controllers\Auth.php(8): App\Controllers\MyController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:03:44 --> Could not check compatibility between App\Controllers\MyController::initController(CodeIgniter\HTTP\RequestInterface $request, CodeIgniter\HTTP\ResponseInterface $response, App\Controllers\LoggerInterface $logger) and App\Controllers\BaseController::initController(CodeIgniter\HTTP\RequestInterface $request, CodeIgniter\HTTP\ResponseInterface $response, Psr\Log\LoggerInterface $logger), because class App\Controllers\LoggerInterface is not available
+in APPPATH\Controllers\MyController.php on line 24.
+ 1 APPPATH\Controllers\MyController.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Could not check compatibility between App\\Controllers\\MyController::initController(CodeIgniter\\HTTP\\RequestInterface $request, CodeIgniter\\HTTP\\ResponseInterface $response, App\\Controllers\\LoggerInterface $logger) and App\\Controllers\\BaseController::initController(CodeIgniter\\HTTP\\RequestInterface $request, CodeIgniter\\HTTP\\ResponseInterface $response, Psr\\Log\\LoggerInterface $logger), because class App\\Controllers\\LoggerInterface is not available', 'APPPATH\\Controllers\\MyController.php', 24, [...])
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(282): include_once('APPPATH\\Controllers\\MyController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\MyController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\MyController')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\MyController')
+ 6 APPPATH\Controllers\Auth.php(5): spl_autoload_call('App\\Controllers\\MyController')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(282): include_once('APPPATH\\Controllers\\Auth.php')
+ 8 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Auth.php')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+10 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+11 [internal function]: spl_autoload_call('App\\Controllers\\Auth')
+12 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Auth', true)
+13 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+14 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:04:34 --> Cannot call constructor
+in APPPATH\Controllers\Auth.php on line 8.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:05:31 --> Call to a member function model() on null
+in APPPATH\Controllers\MyController.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\MyController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:06:42 --> Call to a member function model() on null
+in APPPATH\Controllers\MyController.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\MyController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:07:57 --> Cannot call constructor
+in APPPATH\Controllers\Auth.php on line 8.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:08:15 --> Cannot call constructor
+in APPPATH\Controllers\MyController.php on line 27.
+ 1 APPPATH\Controllers\Auth.php(8): App\Controllers\MyController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:08:37 --> Cannot call constructor
+in APPPATH\Controllers\BaseController.php on line 44.
+ 1 APPPATH\Controllers\MyController.php(27): App\Controllers\BaseController->__construct()
+ 2 APPPATH\Controllers\Auth.php(8): App\Controllers\MyController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:08:54 --> Cannot call constructor
+in APPPATH\Controllers\MyController.php on line 27.
+ 1 APPPATH\Controllers\Auth.php(8): App\Controllers\MyController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Auth->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:10:21 --> Call to a member function model() on null
+in APPPATH\Controllers\MyController.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\MyController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:10:37 --> Class 'App\Controllers\UserModel' not found
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:11:09 --> Class 'App\Controllers\User_model' not found
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:15:53 --> Class 'App\Controllers\User_model' not found
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:17:38 --> Class 'App\Controllers\User' not found
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:18:00 --> Class 'App\Controllers\User' not found
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:18:11 --> Class 'App\Controllers\User' not found
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:18:42 --> Class 'App\Controllers\User' not found
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:18:51 --> Class 'App\Controllers\User' not found
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:23:51 --> Class 'App\Controllers\User' not found
+in APPPATH\Controllers\Auth.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:24:31 --> Call to a member function createAccount() on null
+in APPPATH\Controllers\Auth.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:24:53 --> Class 'App\Models\stdClass' not found
+in APPPATH\Models\UserModel.php on line 15.
+ 1 APPPATH\Controllers\Auth.php(42): App\Models\UserModel->createAccount()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:27:50 --> Too few arguments to function App\Models\UserModel::createAccount(), 0 passed in D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php on line 42 and exactly 1 expected
+in APPPATH\Models\UserModel.php on line 13.
+ 1 APPPATH\Controllers\Auth.php(42): App\Models\UserModel->createAccount()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:28:04 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(735): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\UserModel.php(16): CodeIgniter\Model->__get('input')
+ 4 APPPATH\Controllers\Auth.php(42): App\Models\UserModel->createAccount()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:28:28 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(735): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\UserModel.php(15): CodeIgniter\Model->__get('input')
+ 4 APPPATH\Controllers\Auth.php(42): App\Models\UserModel->createAccount()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:31:17 --> Call to a member function post() on null
+in APPPATH\Models\UserModel.php on line 34.
+ 1 APPPATH\Controllers\Auth.php(42): App\Models\UserModel->createAccount()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:32:35 --> Call to a member function getPost() on null
+in APPPATH\Models\UserModel.php on line 34.
+ 1 APPPATH\Controllers\Auth.php(42): App\Models\UserModel->createAccount()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-02 08:33:50 --> Call to a member function post() on null
+in APPPATH\Models\UserModel.php on line 34.
+ 1 APPPATH\Controllers\Auth.php(42): App\Models\UserModel->createAccount()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

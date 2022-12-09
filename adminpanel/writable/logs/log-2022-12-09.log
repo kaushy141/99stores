@@ -1,0 +1,858 @@
+CRITICAL - 2022-12-09 02:53:59 --> Cannot redeclare App\Controllers\MyController::addToEmail()
+in APPPATH\Controllers\MyController.php on line 115.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-09 02:55:09 --> syntax error, unexpected 'public' (T_PUBLIC)
+in APPPATH\Models\ValidationModel.php on line 42.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\ValidationModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ValidationModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ValidationModel')
+ 4 [internal function]: spl_autoload_call('App\\Models\\ValidationModel')
+ 5 SYSTEMPATH\Config\Factories.php(155): class_exists('App\\Models\\ValidationModel')
+ 6 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'App\\Controllers\\ValidationModel')
+ 7 SYSTEMPATH\Config\Factories.php(86): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 8 SYSTEMPATH\Common.php(809): CodeIgniter\Config\Factories::models('App\\Controllers\\ValidationModel', [...], null)
+ 9 APPPATH\Controllers\Auth.php(112): model('App\\Controllers\\ValidationModel')
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 02:56:41 --> Cannot declare class App\Models\UserModel, because the name is already in use
+in APPPATH\Models\ValidationModel.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-09 02:58:16 --> Call to a member function getLink() on null
+in APPPATH\Controllers\Auth.php on line 118.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 02:58:52 --> Call to a member function getLink() on null
+in APPPATH\Controllers\Auth.php on line 118.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 02:59:32 --> Call to a member function getLink() on null
+in APPPATH\Controllers\Auth.php on line 118.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 03:00:12 --> Call to a member function getLink() on null
+in APPPATH\Controllers\Auth.php on line 119.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 03:01:37 --> Argument 3 passed to view() must be of the type array, bool given, called in D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php on line 120
+in SYSTEMPATH\Common.php on line 1120.
+ 1 APPPATH\Controllers\Auth.php(120): view('user-registration', [...], true)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 03:02:38 --> Argument 2 passed to view() must be of the type array, null given, called in D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\MyController.php on line 68
+in SYSTEMPATH\Common.php on line 1120.
+ 1 APPPATH\Controllers\MyController.php(68): view('email-template/inc/email-data', null)
+ 2 APPPATH\Controllers\Auth.php(120): App\Controllers\MyController->emailView('user-registration', [...], true)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 03:34:32 --> Argument 3 passed to view() must be of the type array, bool given, called in D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\MyController.php on line 66
+in SYSTEMPATH\Common.php on line 1120.
+ 1 APPPATH\Controllers\MyController.php(66): view('email-template/inc/email-header', [...], true)
+ 2 APPPATH\Controllers\Auth.php(120): App\Controllers\MyController->emailView('user-registration', [...], true)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 05:55:05 --> Argument 3 passed to view() must be of the type array, bool given, called in D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\MyController.php on line 66
+in SYSTEMPATH\Common.php on line 1120.
+ 1 APPPATH\Controllers\MyController.php(66): view('email-template/inc/email-header', [...], true)
+ 2 APPPATH\Controllers\Auth.php(120): App\Controllers\MyController->emailView('user-registration', [...], true)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 05:59:22 --> Argument 3 passed to view() must be of the type array, bool given, called in D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\MyController.php on line 66
+in SYSTEMPATH\Common.php on line 1120.
+ 1 APPPATH\Controllers\MyController.php(66): view('email-template/inc/email-header', [...], true)
+ 2 APPPATH\Controllers\Auth.php(119): App\Controllers\MyController->emailView('user-registration', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:00:10 --> Argument 2 passed to view() must be of the type array, null given, called in D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\MyController.php on line 68
+in SYSTEMPATH\Common.php on line 1120.
+ 1 APPPATH\Controllers\MyController.php(68): view('email-template/inc/email-data', null)
+ 2 APPPATH\Controllers\Auth.php(119): App\Controllers\MyController->emailView('user-registration', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:01:32 --> Invalid file: email-template/inc/email-data.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('email-template/inc/email-data.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('email-template/inc/email-data', [], true)
+ 3 APPPATH\Controllers\MyController.php(68): view('email-template/inc/email-data', [...])
+ 4 APPPATH\Controllers\Auth.php(119): App\Controllers\MyController->emailView('user-registration', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:09:04 --> Too few arguments to function CodeIgniter\View\Parser::__construct(), 0 passed in D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\MyController.php on line 38 and at least 1 expected
+in SYSTEMPATH\View\Parser.php on line 78.
+ 1 APPPATH\Controllers\MyController.php(38): CodeIgniter\View\Parser->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\MyController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:14:25 --> syntax error, unexpected 'return' (T_RETURN)
+in APPPATH\Controllers\MyController.php on line 68.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\MyController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\MyController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\MyController')
+ 4 APPPATH\Controllers\Auth.php(6): spl_autoload_call('App\\Controllers\\MyController')
+ 5 SYSTEMPATH\Router\AutoRouter.php(147): include_once('APPPATH\\Controllers\\Auth.php')
+ 6 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('auth/signupcheck')
+ 7 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('auth/signupcheck')
+ 8 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\Router->handle('auth/signupcheck')
+ 9 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:18:39 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php:1730
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'D:\\xampp\\htdocs...', 1730, Array)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php(1730): mail('kaushyedu7@gmai...', '=?UTF-8?Q?New=2...', '<style>\r\n.wrapp...', 'Date: Fri, 9 De...', '-f service@myin...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithMail()
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#4 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\MyController.php(126): CodeIgniter\Email\Email->send()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(123): App\Controllers\MyController->sentEmail()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-12-09 06:18:39 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2022-12-09 06:18:39 --> 
+CRITICAL - 2022-12-09 06:20:34 --> Call to a member function verify() on null
+in APPPATH\Controllers\Auth.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->validation('d39bd5e81fde19bef56257a9207dcd9a')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:22:00 --> mysqli_sql_exception: Unknown column 'user_verification.deleted_at' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(47): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('d39bd5e81fde19b...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('d39bd5e81fde19b...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:22:00 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\VerificationModel.php(47): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('d39bd5e81fde19bef56257a9207dcd9a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('d39bd5e81fde19bef56257a9207dcd9a')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:28:19 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Models\VerificationModel.php on line 49.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('d39bd5e81fde19bef56257a9207dcd9a')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('d39bd5e81fde19bef56257a9207dcd9a')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:29:21 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Models\VerificationModel.php on line 50.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('d39bd5e81fde19bef56257a9207dcd9a')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('d39bd5e81fde19bef56257a9207dcd9a')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:30:12 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::rowData()
+in APPPATH\Models\VerificationModel.php on line 49.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('d39bd5e81fde19bef56257a9207dcd9a')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('d39bd5e81fde19bef56257a9207dcd9a')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:33:40 --> mysqli_sql_exception: Unknown column 'user_verification.deleted_at' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(47): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('d39bd5e81fde19b...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('d39bd5e81fde19b...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:33:40 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\VerificationModel.php(47): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('d39bd5e81fde19bef56257a9207dcd9a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('d39bd5e81fde19bef56257a9207dcd9a')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:34:31 --> mysqli_sql_exception: Unknown column 'user_verification.deleted_at' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(42): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('d39bd5e81fde19b...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('d39bd5e81fde19b...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:34:31 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\VerificationModel.php(42): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('d39bd5e81fde19bef56257a9207dcd9a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('d39bd5e81fde19bef56257a9207dcd9a')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:36:55 --> mysqli_sql_exception: Unknown column 'user_verification.deleted_at' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(42): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('d39bd5e81fde19b...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('d39bd5e81fde19b...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:36:55 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\VerificationModel.php(42): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('d39bd5e81fde19bef56257a9207dcd9a')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('d39bd5e81fde19bef56257a9207dcd9a')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:37:54 --> mysqli_sql_exception: Unknown column 'user_verification.deleted_at' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(42): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:37:54 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\VerificationModel.php(42): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:45:46 --> mysqli_sql_exception: Unknown column 'user_verification.deleted_at' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(43): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:45:46 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\VerificationModel.php(43): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:46:22 --> mysqli_sql_exception: Unknown column 'user_verification.deleted_at' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(41): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:46:22 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\VerificationModel.php(41): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:48:03 --> mysqli_sql_exception: Unknown column 'user_verification.deleted_at' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(42): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:48:03 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\VerificationModel.php(42): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:49:36 --> Call to a member function getQuery() on null
+in APPPATH\Models\VerificationModel.php on line 42.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:49:52 --> mysqli_sql_exception: Unknown column 'user_verification.deleted_at' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(43): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:49:52 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\VerificationModel.php(43): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:51:07 --> Call to a member function getLastQuery() on null
+in APPPATH\Models\VerificationModel.php on line 42.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:51:17 --> mysqli_sql_exception: Unknown column 'user_verification.deleted_at' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(43): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:51:17 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\VerificationModel.php(43): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:51:29 --> mysqli_sql_exception: Unknown column 'user_verification.deleted_at' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(43): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:51:29 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 250.
+ 1 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 2 APPPATH\Models\VerificationModel.php(43): CodeIgniter\BaseModel->first()
+ 3 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 06:55:20 --> mysqli_sql_exception: Unknown column 'email' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(42): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#6 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#7 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 06:56:37 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Models\VerificationModel.php on line 44.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:57:06 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::first()
+in APPPATH\Models\VerificationModel.php on line 41.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:57:16 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::row()
+in APPPATH\Models\VerificationModel.php on line 41.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:57:27 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::record()
+in APPPATH\Models\VerificationModel.php on line 41.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:57:46 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Models\VerificationModel.php on line 44.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:59:56 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+in APPPATH\Models\VerificationModel.php on line 41.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:01:36 --> Cannot use object of type stdClass as array
+in APPPATH\Models\VerificationModel.php on line 45.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:02:03 --> Cannot use object of type stdClass as array
+in APPPATH\Models\VerificationModel.php on line 44.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:02:05 --> Cannot use object of type stdClass as array
+in APPPATH\Models\VerificationModel.php on line 44.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:04:05 --> Cannot use object of type stdClass as array
+in APPPATH\Models\VerificationModel.php on line 44.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:05:11 --> mysqli_sql_exception: Unknown column 'users.user_id' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(524): CodeIgniter\Model->doFind(true, '1')
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\UserModel.php(31): CodeIgniter\BaseModel->find('1')
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(44): App\Models\UserModel->get('1')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-12-09 07:05:11 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 183.
+ 1 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(true, '1')
+ 2 APPPATH\Models\UserModel.php(31): CodeIgniter\BaseModel->find('1')
+ 3 APPPATH\Models\VerificationModel.php(44): App\Models\UserModel->get('1')
+ 4 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:06:44 --> mysqli_sql_exception: Unknown column 'users.user_id' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(524): CodeIgniter\Model->doFind(true, '1')
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\UserModel.php(32): CodeIgniter\BaseModel->find('1')
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(43): App\Models\UserModel->get('1')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-12-09 07:06:44 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 183.
+ 1 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(true, '1')
+ 2 APPPATH\Models\UserModel.php(32): CodeIgniter\BaseModel->find('1')
+ 3 APPPATH\Models\VerificationModel.php(43): App\Models\UserModel->get('1')
+ 4 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:06:46 --> mysqli_sql_exception: Unknown column 'users.user_id' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(524): CodeIgniter\Model->doFind(true, '1')
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\UserModel.php(32): CodeIgniter\BaseModel->find('1')
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(43): App\Models\UserModel->get('1')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-12-09 07:06:46 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 183.
+ 1 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(true, '1')
+ 2 APPPATH\Models\UserModel.php(32): CodeIgniter\BaseModel->find('1')
+ 3 APPPATH\Models\VerificationModel.php(43): App\Models\UserModel->get('1')
+ 4 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:07:36 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\UserModel.php(31): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php(43): App\Models\UserModel->get('1')
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db39...')
+#7 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-12-09 07:07:36 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\UserModel.php on line 31.
+ 1 APPPATH\Models\VerificationModel.php(43): App\Models\UserModel->get('1')
+ 2 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:08:19 --> Argument 1 passed to CodeIgniter\Model::__construct() must implement interface CodeIgniter\Database\ConnectionInterface or be null, string given, called in D:\xampp\htdocs\www\scholar\adminpanel\app\Models\VerificationModel.php on line 42
+in SYSTEMPATH\Model.php on line 132.
+ 1 APPPATH\Models\VerificationModel.php(42): CodeIgniter\Model->__construct('App\\Models\\UserModel')
+ 2 APPPATH\Controllers\Auth.php(43): App\Models\VerificationModel->verify('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:10:05 --> Call to undefined method App\Models\VerificationModel::cehck
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Auth.php(43): CodeIgniter\Model->__call('cehck', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:10:35 --> Call to undefined method App\Models\VerificationModel::cehck
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Auth.php(43): CodeIgniter\Model->__call('cehck', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:10:49 --> Call to undefined method App\Models\VerificationModel::cehck
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Auth.php(43): CodeIgniter\Model->__call('cehck', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:11:53 --> Call to undefined method App\Models\VerificationModel::cehck
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Auth.php(43): CodeIgniter\Model->__call('cehck', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:12:53 --> Class 'App\Controllers\VerificationModel' not found
+in APPPATH\Controllers\Auth.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:13:08 --> Class 'App\Controllers\VerificationModel' not found
+in APPPATH\Controllers\Auth.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:13:13 --> Class 'App\Controllers\VerificationModel' not found
+in APPPATH\Controllers\Auth.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:13:44 --> Call to undefined method App\Models\VerificationModel::cehck
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Auth.php(43): CodeIgniter\Model->__call('cehck', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:13:58 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\UserModel.php(31): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+#6 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#7 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 07:13:58 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\UserModel.php on line 31.
+ 1 APPPATH\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:15:31 --> mysqli_sql_exception: Unknown column 'users.user_id' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\system\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\system\BaseModel.php(524): CodeIgniter\Model->doFind(true, '1')
+#6 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\UserModel.php(31): CodeIgniter\BaseModel->find('1')
+#7 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#9 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 07:15:31 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH\Model.php on line 183.
+ 1 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(true, '1')
+ 2 APPPATH\Models\UserModel.php(31): CodeIgniter\BaseModel->find('1')
+ 3 APPPATH\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:16:21 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\UserModel.php(32): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+#6 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#7 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 07:16:21 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\UserModel.php on line 32.
+ 1 APPPATH\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:16:22 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\UserModel.php(32): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+#6 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#7 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 07:16:22 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\UserModel.php on line 32.
+ 1 APPPATH\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:16:22 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\UserModel.php(32): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+#6 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#7 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 07:16:22 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\UserModel.php on line 32.
+ 1 APPPATH\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:17:33 --> mysqli_sql_exception: Unknown column 'user_id' in 'where clause' in D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\www\scholar\adminpanel\app\Models\UserModel.php(33): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+#6 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db39...')
+#7 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 07:17:33 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\UserModel.php on line 33.
+ 1 APPPATH\Controllers\Auth.php(45): App\Models\UserModel->get('1')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:18:10 --> Call to undefined method App\Controllers\Auth::update()
+in APPPATH\Controllers\Auth.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:22:12 --> Access to undeclared static property: App\Models\VerificationModel::$verificationTypeMail
+in APPPATH\Controllers\Auth.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verification('5dbfee50919db391d8146086ba00ff86')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:43:19 --> Too few arguments to function App\Controllers\Auth::logout(), 0 passed in D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\Auth.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->logout()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:50:21 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php:1730
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'D:\\xampp\\htdocs...', 1730, Array)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php(1730): mail('kaushyedu3@gmai...', '=?UTF-8?Q?New=2...', '<style>\r\n.wrapp...', 'Date: Fri, 9 De...', '-f service@myin...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithMail()
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#4 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\MyController.php(126): CodeIgniter\Email\Email->send()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(131): App\Controllers\MyController->sentEmail()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-12-09 07:50:21 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2022-12-09 07:50:21 --> 
+ERROR - 2022-12-09 07:50:52 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php:1730
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'D:\\xampp\\htdocs...', 1730, Array)
+#1 D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php(1730): mail('cooldudekaushy@...', '=?UTF-8?Q?New=2...', '<style>\r\n.wrapp...', 'Date: Fri, 9 De...', '-f service@myin...')
+#2 D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithMail()
+#3 D:\xampp\htdocs\www\scholar\adminpanel\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#4 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\MyController.php(126): CodeIgniter\Email\Email->send()
+#5 D:\xampp\htdocs\www\scholar\adminpanel\app\Controllers\Auth.php(131): App\Controllers\MyController->sentEmail()
+#6 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(927): App\Controllers\Auth->signupcheck()
+#7 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\www\scholar\adminpanel\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\www\scholar\adminpanel\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-12-09 07:50:52 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2022-12-09 07:50:52 --> 

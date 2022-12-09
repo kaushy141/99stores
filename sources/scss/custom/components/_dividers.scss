@@ -1,0 +1,11 @@
+/** @section Dividers */
+
+hr {
+	margin-top: 0;
+	margin-bottom: 0;
+	border-top: $hr-border-width solid $hr-border-color;
+}
+
+.divider{
+	border-top: solid 3px $primary;
+}

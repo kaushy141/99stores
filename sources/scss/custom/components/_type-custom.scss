@@ -1,0 +1,300 @@
+/** @section Typography */
+
+// Body
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-body;
+	line-height: $line-height-base;
+	font-weight: $font-weight-base;
+	color: $body-color;
+	background-color: $body-bg;
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+// Headings
+#{headings()} {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: $headings-font-weight;
+	color: $headings-color;
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+h1,
+.heading-1 {
+	font-size: 50px;
+	line-height: 1em;
+
+	@include media-breakpoint-up(xl) {
+		font-size: $h1-font-size;
+		line-height: $h1-line-height;
+	}
+}
+
+h2,
+.heading-2 {
+	font-size: 35px;
+	line-height: 1.2;
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		font-size: 40px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: $h2-font-size;
+		line-height: $h2-line-height;
+	}
+}
+
+h3,
+.heading-3 {
+	font-size: 24px;
+	line-height: 1.5;
+
+	@include media-breakpoint-up(xl) {
+		font-size: $h3-font-size;
+		line-height: $h3-line-height;
+	}
+}
+
+h4,
+.heading-4 {
+	font-size: 22px;
+	line-height: 1.5;
+
+	@include media-breakpoint-up(xl) {
+		font-size: $h4-font-size;
+		line-height: $h4-line-height;
+	}
+}
+
+h5,
+.heading-5 {
+	font-size: 20px;
+	line-height: 1.5;
+
+	@include media-breakpoint-up(xl) {
+		font-size: $h5-font-size;
+		line-height: $h5-line-height;
+	}
+}
+
+h6,
+.heading-6 {
+	font-size: 18px;
+	line-height: 1.5;
+
+	@include media-breakpoint-up(xl) {
+		font-size: $h6-font-size;
+		line-height: $h6-line-height;
+	}
+}
+
+// Emphasis
+small,
+.small {
+	display: block;
+	font-size: $font-size-sm;
+	line-height: $line-height-sm;
+}
+
+mark,
+.mark {
+	padding: 3px 5px;
+	color: $white;
+	background: $primary;
+}
+.fz-18{
+	font-size: 18px !important;
+}
+
+// Big text
+.big {
+	font-size: $font-size-lg;
+	line-height: $line-height-lg;
+}
+
+.lead {
+	font-size: $lead-font-size;
+	line-height: $lead-line-height;
+	font-weight: $lead-font-weight;
+}
+
+code {
+	padding: $code-padding-y $code-padding-x;
+	border-radius: $border-radius-sm;
+	font-size: $code-font-size;
+	color: $code-color;
+	background: $code-bg;
+}
+
+// Paragraph
+p {
+	[data-toggle='tooltip'] {
+		padding-left: .25em;
+		padding-right: .25em;
+		color: $primary;
+	}
+
+	[style*='max-width'] {
+		display: inline-block;
+	}
+}
+
+// Selection
+::selection {
+	background: $primary;
+	color: $white;
+}
+
+::-moz-selection {
+	background: $primary;
+	color: $white;
+}
+
+.phone-link{
+	font-size: 40px;
+	font-weight:700;
+	color: $primary;
+	&:hover{
+		color: $secondary;
+		transition: all 0.2s linear;
+	}
+	// Large <991px
+	@include media-breakpoint-down(md) {
+		font-size: 30px;
+	}
+}
+.phone-link-title {
+	font-size: 40px;
+	font-weight:700;
+	color: $primary;
+	margin-right: 10px;
+	// Large <991px
+	@include media-breakpoint-down(md) {
+		font-size: 30px;
+	}
+}
+
+.phone-link-second a{
+	font-size: 26px;
+	font-weight: 700;
+	color: $secondary;
+	&:hover{
+		color: $primary;
+		transition: all 0.2s linear;
+	}
+}
+.wrap  .phone-link-second{
+	margin-top: 10px;
+}
+* + .phone-wrap{
+	margin-top: 85px;
+	// Extra large <1200px
+	@include media-breakpoint-down(lg) {
+		margin-top: 35px;
+	}
+	// Large <991px
+	@include media-breakpoint-down(md) {
+		margin-top: 15px;
+	}
+}
+.title h2{
+	line-height: 66px;
+	@include media-breakpoint-down(md) {
+		line-height: 33px;
+		font-size: 45px;
+	}
+}
+.subtitle{
+	font-size: 26px;
+	color: $secondary;
+	font-weight: 500;
+}
+.subtitle-2{
+	color: $custom-blue;
+	font-size: 22px;
+	@include media-breakpoint-down(md) {
+		font-size: 18px;
+	}
+}
+
+.subtitle + .title{
+	margin-top: 45px;
+	@include media-breakpoint-down(md) {
+		margin-top: 0;
+	}
+	@include media-breakpoint-down(lg) {
+		margin-top: 15px;
+	}
+}
+* + .subtitle-2{
+	margin-top: 22px;
+	@include media-breakpoint-down(lg) {
+		margin-top: 5px;
+	}
+}
+
+
+.about-wrap{
+	margin: 0 auto;
+	max-width: 1078px;
+	
+}
+.br-none{
+	// Large <991px
+	@include media-breakpoint-down(md) {
+		br{
+			display: none;
+		}
+	}
+}
+.text-wrap-about{
+	max-width: 500px;
+	p{
+		line-height: 146%;
+	}
+}
+
+.single-prod-wrap{
+	padding-top: 55px;
+	margin: 0 auto;
+	max-width: 832px;
+	@include media-breakpoint-down(lg) {
+		padding-top: 30px;
+	}
+	@include media-breakpoint-down(md) {
+		padding-top: 15px;
+	}
+}
+
+.contacts-wrap{
+	color: $primary;
+	font-weight: 500;
+	font-size: 22px;
+	padding-right: 50px;
+	span{
+		color: $custom-blue;
+		font-weight: 400;
+	}
+	p + .phone-link-second{
+		margin-top: 20px;
+	}
+	p + span{
+		margin-top: 10px;
+	}
+	* + p{
+		margin-top: 15px;
+	}
+}
+
+.phone-wrap {
+	display: flex;
+}

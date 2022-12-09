@@ -1,0 +1,72 @@
+/** @section Footers */
+
+// Footer Classic
+.footer-classic {
+	h3,h4,p{
+		color: $white;
+	}
+	p{
+		font-size: 22px;
+		font-weight: 500;
+		line-height: 146%;
+		// Large <991px
+		@include media-breakpoint-down(md) {
+			font-size: 18px;
+		}
+	}
+	padding: 100px 0;
+	background: $dark-blue ;
+	color: $white;
+	.phone-sub{
+		font-size: 26px;
+		color: $secondary;
+		font-weight: 700;
+	}
+	.phone-link{
+		font-size: 26px;
+		font-weight: 700;
+		color: $white;
+		&:hover{
+			color:$secondary;
+		}
+	}
+	p + ul{
+		margin-top: 30px;
+	}
+	.rights{
+		font-size: 14px;
+		color: $custom-blue-2;
+		a{
+			&:hover{
+				color: $secondary;
+			}
+		}
+	}
+	.list-wrapper{
+		margin-top: 40px;
+		border-top: solid 3px $footer-divider;
+		border-bottom: solid 1px $footer-divider;
+		padding: 50px 0;
+		font-size: 18px;
+		a{
+			color: $custom-blue-2;
+			&:hover{
+				color: $secondary;
+			}
+		}
+	}
+	.date{
+		font-size: 14px;
+		color:$custom-blue-2;
+	}
+}
+img + p{
+	margin-top: 24px;
+}
+* + .date{
+	margin-top: 14px;
+}
+* + .list-wrapper{
+	margin-top: 20px;
+}
+

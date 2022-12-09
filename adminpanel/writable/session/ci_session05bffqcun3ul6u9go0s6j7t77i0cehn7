@@ -1,0 +1,10 @@
+__ci_last_regenerate|i:1670490051;_ci_previous_url|s:44:"http://localhost:8083/adminpanel/auth/signup";message|s:279:"	<div class="errors" role="alert">
+		<ul>
+					<li>The fname field is required.</li>
+					<li>The lname field is required.</li>
+					<li>The mobile field is required.</li>
+					<li>The email field is required.</li>
+					<li>The password field is required.</li>
+				</ul>
+	</div>
+";__ci_vars|a:3:{s:7:"message";s:3:"old";s:7:"variant";s:3:"old";s:4:"icon";s:3:"old";}variant|s:7:"warning";icon|s:29:"<i class="fa fa-warning"></i>";

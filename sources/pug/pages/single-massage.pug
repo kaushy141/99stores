@@ -1,0 +1,107 @@
+extends ../_skeleton
+include ../components/card
+block variables
+	- pageName = 'Single Massage'
+
+block page
+
+	include ../sections/_header-classic
+
+	.section.section-lg.bg-secondary
+		.container.wide
+			.text-center
+				h1 Single Service
+				.subtitle-2 Lorem ipsum dolor sit amet, consectetur
+
+	.section.section-xl
+		.container.wide
+			.text-center
+				+img( 'single-massage-1050x591' )
+				.single-prod-wrap
+					h2 Swedish Relaxation
+					.subtitle-2 Neuter castors ducunt ad guttus. Ubi est primus onus? Lactas potus, tanquam ferox cedrium. Est neuter onus, cesaris. Heu, consilium! Ecce, festus competition! Ubi est magnum accentor? Ecce. Pol, adiurator! Camerarius, nobilis medicinas sensim quaestio de salvus, ferox galatae.
+					p.fz-18 Urbs cresceres, tanquam azureus fraticinida.
+
+	//Divider
+	.section
+		.container.wide
+			.divider
+
+
+
+
+	//Pricing
+	.section.section-lg
+		.container.wide
+			.text-center
+				.row.row-md-80.row-sm-60
+					.col-xs-10.col-md-6.col-lg-4
+						.box-price-simple
+							.box-price $99
+							.box-price-title 60min massage
+							.box-price-descr Nunquam promissio transferre adiurator.
+							a.button.button-primary.button-md(href='#') Book Now
+					.col-xs-10.col-md-6.col-lg-4
+						.box-price-simple
+							.box-price $199
+							.box-price-title 90min massage
+							.box-price-descr Nunquam locus verpa boreas.
+							a.button.button-secondary.button-md(href='#') Book Now
+					.col-xs-10.col-md-6.col-lg-4
+						.box-price-simple
+							.box-price $299
+							.box-price-title 120min massage
+							.box-price-descr Nunquam transferre verpa promissio transferre.
+							a.button.button-primary.button-md(href='#') Book Now
+
+
+
+	//Divider
+	.section
+		.container.wide
+			.divider
+
+
+
+
+	//FAQ
+	.section.section.section-xl
+		.container.wide
+			.row.row-md-80.row-sm-50
+				.col-sm-12.col-lg-4
+					.subtitle Frequently Asked <br class="br-none">Questions
+				.col-sm-12.col-lg-8
+					#accordion1.card-group-custom( role='tablist' aria-multiselectable='false' )
+						+card({
+							parentId: 'accordion1',
+							title: 'Do you provide any scripts with your templates?'
+						}).card-corporate
+							p Our templates do not include any additional scripts. Newsletter subscriptions, search fields, forums, image galleries (in HTML versions of Flash products) are inactive. Basic scripts can be easily added at www.zemez.io If you are not sure that the element you’re interested in is active please contact our Support Chat for clarification.
+
+						+card({
+							parentId: 'accordion1',
+							title: 'What are the advantages of purchasing a website template?'
+						}).card-corporate
+							p The major advantage is price: You get a high quality design for just $20-$70. You don’t have to hire a web designer or web design studio. Second advantage is time frame: It usually takes 5-15 days for a good designer to produce a web page of such quality.
+
+						+card({
+							parentId: 'accordion1',
+							title: 'What do I receive when I order a template from Zemez?'
+						}).card-corporate
+							p After you complete the payment via our secure form you will receive the instructions for downloading the product. The source files in the download package can vary based on the type of the product you have purchased.
+
+						+card({
+							parentId: 'accordion1',
+							title: 'In what formats are your templates available?'
+						}).card-corporate
+							p Website templates are available in Photoshop and HTML formats. Fonts are included with the Photoshop file. In most templates, HTML is compatible with Adobe® Dreamweaver® and Microsoft® FrontPage®.
+
+						+card({
+							parentId: 'accordion1',
+							title: 'What am I allowed to do with the templates?'
+						}).card-corporate
+							p You may build a website using the template in any way you like. You may not resell or redistribute templates (like we do); claim intellectual or exclusive ownership to any of our products, modified or unmodified. All products are property of content providing companies and individuals. You are also not allowed to make more than one project using the same template (you have to purchase the same template once more in order to make another project with the same design).
+
+
+
+	include ../sections/_footer-classic

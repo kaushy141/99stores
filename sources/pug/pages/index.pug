@@ -1,0 +1,300 @@
+extends ../_skeleton
+include ../components/card
+
+
+block page
+	include ../sections/_header-classic
+	//Main bunner
+	.section.section-main-bunner.context-dark#home
+		.main-bunner-img.bg-overlay-1(style='background-image: url("images/slide-01.jpg"); background-size: cover;')
+		.main-bunner-inner
+			.container.wide
+				.row.justify-content-left
+					.col-lg-5
+						h1(data-caption-animate='fadeInUp' data-caption-delay='100') Massage <br class="br-none"> On Demand
+						p.lead.text-custom-blue(data-caption-animate='fadeInUp' data-caption-delay='250') Are you tired and exhausted? Do you need to relax and tidy up your body and health? Try our massage today!
+						.btn-wrap
+							.group-xxl.group-middle
+								a(href='#', data-caption-animate='fadeInUp', data-caption-delay='450').button.button-primary.button-md.button-round-2  Book Now
+								a(href='#', data-caption-animate='fadeInUp', data-caption-delay='450').button.button-white.button-md.button-round-2 Buy As Gift
+						.phone-wrap.phone-wrap-2
+							.phone-link-title P:
+							a.phone-link( href= 'tel:#' )  1 000 234 7890
+						p.text-custom-blue 178 West 27th Street, Suite 527, New York NY 10012, United States
+
+	//Testimonials
+	.section.section-lg.bg-gray-150
+			.text-center
+				p.subtitle Our customers love Beautyrel
+				h2.title Rated #1 massage in New York
+				.subtitle-box
+					.subtitle-box-text Reviews from:
+					.subtitle-box-media
+						+img('title-img-153x38.png')
+			.owl-carousel.owl-theme-1(
+				data-items='1',
+				data-sm-items='1',
+				data-md-items='1',
+				data-lg-items='1',
+				data-xl-items='2',
+				data-xxl-items='3',
+				data-margin='15px',
+				data-nav='false',
+				data-dots='true',
+				data-autoplay='8000'
+			)
+
+				.testimonial-box
+					.testimonial-title Cool!
+					.testimonial-rate
+						+png('rate-2-146x27')
+					.testimonial-text “I have found all your services to be amazing. Most recently I received a massage with cupping from Janet. She is a miracle worker. I store stress in my back and often have tension from long hours on the computer. Janet somehow manages make my back feel like I have never had any moments of stress in life.”
+					.testimonial-name — Alisa R.
+
+				.testimonial-box
+					.testimonial-title Excellent!
+					.testimonial-rate
+						+png('rate-1-146x27')
+					.testimonial-text “Your massage therapists are beyond incredible. They are so kind-hearted and treat you like the individual that you are. They listen and take note of what pressure you like.”
+					.testimonial-name — John C.
+
+				.testimonial-box
+					.testimonial-title Amazing!
+					.testimonial-rate
+						+png('rate-1-146x27')
+					.testimonial-text "Your massage therapists are amazing at deep tissue massage. They take time before the massage to truly understand problem areas and really listen! They really aim to provide a high level of service."
+					.testimonial-name — Evan M.
+
+				.testimonial-box
+					.testimonial-title Excellent!
+					.testimonial-rate
+							+png('rate-2-146x27')
+					.testimonial-text  “I am pleased with the provided service and will continue my sessions with you. Also, I would recommend Beautyrel massage to anybody who has chronic pain issues.”
+					.testimonial-name  — Edward J.
+
+	//How Works
+	.section.section.section-lg
+		.container.wide
+			.text-center
+				.subtitle Massage made easy
+				h2.title How Beautyrel Works
+				.subtitle-2 Getting a massage has never been easier.
+			.row.row-md-80.row-sm-50
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern
+						.box-info-modern-figure
+							+img( 'box-home-1-390x344' )
+						h4.box-info-modern-title Book
+						.box-info-modern-text Book an appointment on our website or at the salon’s reception
+
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern
+						.box-info-modern-figure
+							+img( 'box-home-2-390x344' )
+						h4.box-info-modern-title Meet
+						.box-info-modern-text Come in time and get ready to relax and unwind at Beautyrel.
+
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern
+						.box-info-modern-figure
+							+img( 'box-home-3-390x344' )
+						h4.box-info-modern-title Relax
+						.box-info-modern-text Forget about all things that worry you and relax at our beauty salon.
+
+
+	//Divider
+	.section
+		.container.wide
+			.divider
+
+
+	// Services
+	.section.section.section-lg
+		.container.wide
+			.row.row-md-30
+				.col-md-5.col-lg-5
+					.subtitle Spa-quality service
+					h2.title We Deliver Quality Service
+					.subtitle-2 At our beauty salon, you get the highest level of customer service and the utmost relaxation at a very affordable price.
+					.btn-wrap
+						a.button.button-primary.button-md(href='#', data-caption-animate='fadeInUp', data-caption-delay='450') Book Now
+				.col-md-7.col-lg-7
+					.video-wrap.mt-md-5.mt-sm-5
+						+video-box({
+							"background": "video-prev-1050x591.jpg",
+							"link": "https://www.youtube.com/watch?v=NxPbcuUZcL0"
+						})
+			.text-wrap
+				.row.row-md-30
+					.col-md-6.col-lg-6
+						+img( 'box-home-3-580x550' )
+					.col-md-6.col-lg-6
+						.mt-4
+							.subtitle True experts
+							h2.title Best Massage Therapists
+							.subtitle-2 Beautyrel is a team of dedicated and professionally trained massage therapists always ready to help you relax. Experience the best body treatment with us!
+							.btn-wrap
+								a.button.button-secondary.button-md(href='#', data-caption-animate='fadeInUp', data-caption-delay='450') Book Now
+
+
+	//Divider
+	.section
+		.container.wide
+			.divider
+
+
+	// Choose Your Massage
+	.section.section.section-lg.bg-default
+		.container.wide
+			//.divider
+			.text-center
+				.subtitle A massage for any occasion
+				h2.title Choose Your Massage
+			.row.row-60
+				.col-xs-10.col-md-6.col-lg-4
+					article.box-minimal
+						.box-minimal-icon
+							+png( 'icon-1-44x44' )
+						h4.box-minimal-title Relaxation
+						.box-minimal-text
+							p Your therapist will aim to relax, revive and rejuvenate you
+
+				.col-xs-10.col-md-6.col-lg-4
+					article.box-minimal
+						.box-minimal-icon
+							+png( 'icon-2-44x44' )
+						h4.box-minimal-title Pregnancy Massage
+						.box-minimal-text
+							p Tranquil relaxation to reduce stress and get relief from cramps and pain.
+
+				.col-xs-10.col-md-6.col-lg-4
+					article.box-minimal
+						.box-minimal-icon
+							+png( 'icon-3-44x44' )
+						h4.box-minimal-title Sports Massage
+						.box-minimal-text
+							p Improved flexibility and reduced injury risk to help you recover quicker.
+
+
+
+
+
+
+	//Parallax
+	+parallax({
+		img: 'paralax-home',
+		innerClass: 'section-xxl context-dark'
+	})
+		.container.wide
+			.text-center
+				.row.row-md-80.row-sm-60
+					.col-xs-10.col-md-6.col-lg-4
+						.box-price-simple
+							.box-price
+								p $99
+							.box-price-title
+								p 60-min massage
+							.box-price-descr
+								p.text-custom-blue 1-hour massage perfectly customized to your needs.
+							a.button.button-primary.button-md(href='#') Book Now
+					.col-xs-10.col-md-6.col-lg-4
+						.box-price-simple
+							.box-price
+								p $199
+							.box-price-title
+								p 90-min massage
+							.box-price-descr
+								p.text-custom-blue 1.5-hour massage with everything you need.
+							a.button.button-secondary.button-md(href='#') Book Now
+					.col-xs-10.col-md-6.col-lg-4
+						.box-price-simple
+							.box-price
+								p $299
+							.box-price-title
+								p 120-min massage
+							.box-price-descr
+								p.text-custom-blue 2-hour massage for all your relaxation purposes
+							a.button.button-primary.button-md(href='#') Book Now
+
+
+
+	//FAQ
+	.section.section.section-xl
+		.container.wide
+			.row.row-md-80.row-sm-50
+				.col-sm-12.col-lg-4
+					.subtitle Frequently Asked <br class="br-none">Questions
+				.col-sm-12.col-lg-8
+					#accordion1.card-group-custom( role='tablist' aria-multiselectable='false' )
+						+card({
+							parentId: 'accordion1',
+							title: 'Do you provide any scripts with your templates?'
+						}).card-corporate
+							p Our templates do not include any additional scripts. Newsletter subscriptions, search fields, forums, image galleries (in HTML versions of Flash products) are inactive. Basic scripts can be easily added at www.zemez.io If you are not sure that the element you’re interested in is active please contact our Support Chat for clarification.
+
+						+card({
+							parentId: 'accordion1',
+							title: 'What are the advantages of purchasing a website template?'
+						}).card-corporate
+							p The major advantage is price: You get a high quality design for just $20-$70. You don’t have to hire a web designer or web design studio. Second advantage is time frame: It usually takes 5-15 days for a good designer to produce a web page of such quality.
+
+						+card({
+							parentId: 'accordion1',
+							title: 'What do I receive when I order a template from Zemez?'
+						}).card-corporate
+							p After you complete the payment via our secure form you will receive the instructions for downloading the product. The source files in the download package can vary based on the type of the product you have purchased.
+
+						+card({
+							parentId: 'accordion1',
+							title: 'In what formats are your templates available?'
+						}).card-corporate
+							p Website templates are available in Photoshop and HTML formats. Fonts are included with the Photoshop file. In most templates, HTML is compatible with Adobe® Dreamweaver® and Microsoft® FrontPage®.
+
+						+card({
+							parentId: 'accordion1',
+							title: 'What am I allowed to do with the templates?'
+						}).card-corporate
+							p You may build a website using the template in any way you like. You may not resell or redistribute templates (like we do); claim intellectual or exclusive ownership to any of our products, modified or unmodified. All products are property of content providing companies and individuals. You are also not allowed to make more than one project using the same template (you have to purchase the same template once more in order to make another project with the same design).
+
+
+
+	//Gift Voucher
+	.section.section.section-xl.bg-gray-150
+		.container.wide
+			.text-center
+				h2.title Beautyrel Massage Gift Voucher
+				.subtitle-2 Get a personalized gift voucher for your family member.
+			.row.row-md-80.row-sm-50
+				.col-xs-10.col-md-6.col-lg-4.text-center
+					.voucher-box
+						.voucher-name $250 Gift Voucher
+						.voucher-title Basic Voucher
+						.voucher-text The most affordable option for anyone.
+						a.button.button-secondary.button-md(href='#') Buy As Gift
+				.col-xs-10.col-md-6.col-lg-4.text-center
+					.voucher-box-dark
+						.voucher-name $450 Gift Voucher
+						.voucher-title Standard Voucher
+						.voucher-text Our most popular offer that also is a great present.
+						a.button.button-secondary-dark.button-md(href='#') Buy As Gift
+				.col-xs-10.col-md-6.col-lg-4.text-center
+					.voucher-box
+						.voucher-name $950 Gift Voucher
+						.voucher-title Premium Voucher
+						.voucher-text This voucher includes the cost of all our treatments.
+						a.button.button-secondary.button-md(href='#') Buy As Gift
+
+
+
+	//vacancy
+	.section.section-custom
+		.container.wide
+			.text-center
+				h2.title Are You a Qualified <br class="br-none"> Massage Therapist?
+				.subtitle-2.big Join our team to push your career forward today!
+				.row.justify-content-center
+					a.button.button-secondary.button-md(href='#') Join Us
+				.img-wrap
+					+img('home-4-830x446')
+
+	include ../sections/_footer-classic

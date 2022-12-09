@@ -1,0 +1,20 @@
+/** @section Images */
+
+// Standard img style
+img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+
+.img-responsive {
+	width: 100%;
+}
+
+* + .img-wrap{
+	margin-top: 70px;
+	// Large <991px
+	@include media-breakpoint-down(md) {
+		margin-top: 50px;
+	}
+}

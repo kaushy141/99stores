@@ -1,0 +1,38 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Buttons'
+
+block page
+	include ../sections/_header-classic
+
+	+breadcrumbs
+
+	//Button Sizes
+	section.section.section-md.bg-default.text-center
+		.container
+			h4 Button Sizes
+			p 3 different sizes: small, middle, and large.
+			.group-xl
+				.button.button-sm.button-primary Small
+				.button.button-md.button-primary Middle
+				.button.button-lg.button-primary Large
+
+
+	hr
+
+	//Button Shapes
+	section.section.section-md.bg-default.text-center
+		.container
+			h4 Button Colors
+			p 3 different colors: primary, secondary, white.
+			.group-xl
+				.button.button-primary Primary
+				.button.button-secondary Secondary
+				.button.button-white White
+
+
+
+
+
+	include ../sections/_footer-classic

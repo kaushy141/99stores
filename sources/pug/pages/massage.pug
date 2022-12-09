@@ -1,0 +1,89 @@
+extends ../_skeleton
+include ../components/card
+block variables
+	- pageName = 'Massage'
+
+block page
+
+	include ../sections/_header-classic
+
+	.section.section-lg.bg-secondary
+		.container.wide
+			.text-center
+				h1 Services
+				.subtitle-2 Lorem ipsum dolor sit amet, consectetur
+
+	.section.section.section-xl
+		.container.wide
+			.text-center
+				.subtitle What we offer
+				h2.title We Bring The Best <br class='d-none d-xl-block'> Massage To You
+			.row.row-md-80.row-sm-50
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern.box-md
+						.box-info-modern-figure
+							+img( 'massage-1-390x344' )
+						.box-info-modern-title
+							a( href= 'single-massage.html' ) Swedish Relaxation
+						.box-info-modern-text.small One of the primary goals of the Swedish massage technique is to relax the entire body
+
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern.box-md
+						.box-info-modern-figure
+							+img( 'massage-2-390x344' )
+						.box-info-modern-title
+							a( href= 'single-massage.html' ) Remedial Deep Tissue
+						.box-info-modern-text.small This will include an assessment of the muscles, ligaments, tendons and posture
+
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern.box-md
+						.box-info-modern-figure
+							+img( 'massage-3-390x344' )
+						.box-info-modern-title
+							a( href= 'single-massage.html' ) Group Bookings
+						.box-info-modern-text.small Treat yourself and your friend with the best massage experience
+
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern.box-md
+						.box-info-modern-figure
+							+img( 'massage-4-390x344' )
+						.box-info-modern-title
+							a( href= 'single-massage.html' ) Pregnancy Massage
+						.box-info-modern-text.small Tranquil relaxation and reduce stress, Relief from cramps, spasms, pain, etc.
+
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern.box-md
+						.box-info-modern-figure
+							+img( 'massage-5-390x344' )
+						.box-info-modern-title
+							a( href= 'single-massage.html' ) Face Massage
+						.box-info-modern-text.small Facial massages increase circulation to your facial tissue, resulting in youthful-looking skin
+
+				.col-xs-10.col-md-6.col-lg-4
+					.box-info-modern.box-md
+						.box-info-modern-figure
+							+img( 'massage-6-390x344' )
+						.box-info-modern-title
+							a( href= 'single-massage.html' ) Massotherapy
+						.box-info-modern-text.small A collection of bodywork modalities designed to improve health
+
+	//Divider
+	.section.section-dv
+		.container.wide
+			.divider
+
+
+
+
+
+	.section.section-custom
+		.container.wide
+			.text-center
+				h2.title Are You a Qualified <br class="br-none"> Massage Therapist?
+				.subtitle-2.big We are waiting for you to join our team
+				.row.justify-content-center
+					a.button.button-secondary.button-md(href='#') Join Us
+				.img-wrap
+					+img('home-4-830x446')
+
+	include ../sections/_footer-classic

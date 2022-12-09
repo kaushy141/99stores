@@ -1,0 +1,178 @@
+/** @section Panel custom */
+
+// Local variables
+$accordion-corporate-color: $primary;
+$accordion-corporate-background: $white;
+$accordion-corporate-border: $custom-gray-1;
+$accordion-corporate-content-color: $body-color;
+$accordion-corporate-arrow-color: $white;
+$accordion-corporate-arrow-background: $primary;
+$accordion-corporate-shadow: -1px 2px 5px 0px rgba(#444953, 0.12);
+$accordion-corporate-border-radius: 6px;
+$accordion-corporate-header-padding: 0px 82px 38px 0;
+$accordion-corporate-content-padding: 20px 44px 26px 0;
+
+// Panel groups
+.card-group-custom {
+	margin-bottom: 0;
+
+	.card-header + .collapse > .card-body,
+	.card-header + .collapse > .list-group {
+		border-top: 0;
+	}
+
+	.card + .card {
+		margin-top: 38px;
+	}
+}
+
+
+.card-group-custom.card-group-corporate {
+	.card + .card {
+		margin-top: 30px;
+	}
+}
+
+.card-custom {
+	display: block;
+	margin: 0;
+	background: inherit;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	text-align: left;
+
+	a {
+		display: block;
+	}
+
+	// Panel heading
+	.card-header {
+		padding: 0;
+		border-bottom: 0;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	// Panel contents
+	.card-body {
+		padding: 0;
+		border-bottom: solid 1px $custom-gray-1;
+		p{
+			font-size: 18px;
+			color: $custom-blue;
+		}
+	}
+
+	.card-title {
+		margin-bottom: 0;
+	}
+}
+
+* + .card-group-custom {
+	margin-top: 22px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 22px;
+	}
+}
+
+// Panel corporate
+.card-corporate {
+	text-align: left;
+
+	.card-title a,
+	.card-body {
+		background: $accordion-corporate-background;
+	}
+
+	.card-title a {
+		position: relative;
+		z-index: 1;
+		padding: $accordion-corporate-header-padding;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 1.25;
+		letter-spacing: 0;
+		color: $accordion-corporate-color;
+		transition: 1.3s all ease;
+		border-radius: $accordion-corporate-border-radius $accordion-corporate-border-radius 0 0;
+		// Large <991px
+		@include media-breakpoint-down(md) {
+			padding: 10px 10px 10px 0;
+		}
+
+		// Open state
+		.card-arrow {
+			&:after {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		// Collapsed state
+		&.collapsed {
+			border-bottom: 1px solid $accordion-corporate-border;
+
+			.card-arrow {
+				border-radius: 0 $accordion-corporate-border-radius $accordion-corporate-border-radius 0;
+				&:after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	// Panel arrow
+	.card-arrow {
+		position: absolute;
+		top: 0;
+		bottom: -1px;
+		right: -1px;
+		z-index: 2;
+		width: 70px;
+		background: $accordion-corporate-arrow-background;
+		border-radius: 0 $accordion-corporate-border-radius 0 0;
+		transition: .33s all ease;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			z-index: 4;
+			transform: translateY(-50%);
+			background: $accordion-corporate-arrow-color;
+		}
+
+		&::before {
+			width: 14px;
+			height: 2px;
+			right: 28px;
+		}
+
+		&::after {
+			width: 2px;
+			height: 14px;
+			right: 34px;
+		}
+	}
+
+	.collapse {
+		position: relative;
+		z-index: 1;
+		color: $accordion-corporate-content-color;
+		border-radius: 0 0 $accordion-corporate-border-radius $accordion-corporate-border-radius;
+	}
+
+	.card-body {
+		padding: $accordion-corporate-content-padding;
+		// Large ≥992px
+		@include media-breakpoint-up(lg) {
+			margin-top: -20px;
+		}
+	}
+
+
+}
