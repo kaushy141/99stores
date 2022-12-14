@@ -97,3 +97,7 @@ define('DEFAULT_EMAIL_CC', 'service@myindianscholar.com');
 define('DEFAULT_EMAIL_BCC', 'service@myindianscholar.com');
 define('DEFAULT_SENDER_EMAIL', 'service@myindianscholar.com');
 define('DEFAULT_SENDER_NAME', 'Service');
+
+define('USER_TYPE_ADMIN', 1);
+define('USER_TYPE_DONNER', 2);
+define('USER_TYPE_STUDENT', 3);

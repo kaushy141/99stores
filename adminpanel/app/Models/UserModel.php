@@ -26,9 +26,29 @@ class UserModel extends Model {
 	protected $unverified = 'Unverified';
 	protected $deleted = 'Deleted';
 	
+	
 	public function get($user_id)
 	{
-		return $this->db->table($this->table)->select('*')->getWhere(['id' => $user_id])->getRowArray();
+		$builder = $this->db->table($this->table);
+		$builder->select("{$this->table}.*, user_types.type_name");
+		$builder->join("user_types", "user_types.type_id = {$this->table}.type");
+		$builder->where("{$this->table}.id", $user_id);
+		$query = $builder->get();
+		//var_dump($this->db);
+		//echo $thi->db->getLastQuery();die;
+		return $query->getFirstRow('array');
+		//return $this->db->table($this->table)->select('*')->getWhere(['id' => $user_id])->getRowArray();
+	}
+	
+	public function getList($type)
+	{
+		$builder = $this->db->table($this->table);
+		$builder->select("{$this->table}.id, {$this->table}.fname, {$this->table}.mname, {$this->table}.lname, {$this->table}.email, {$this->table}.mobile, {$this->table}.created_date, {$this->table}.status, user_types.type_name");
+		$builder->join("user_types", "user_types.type_id = {$this->table}.type");
+		$builder->where("{$this->table}.type", $type);
+		$query = $builder->get();
+		//var_dump($this->db);
+		return $query->getResultArray();
 	}
 }
 ?>

@@ -38,6 +38,12 @@ id="layout-navbar"
 		>Star</a
 	  >
 	</li>
+	
+	 <li class="nav-item me-2 me-xl-0">
+		<a class="nav-link style-switcher-toggle hide-arrow" href="<?php echo base_url('user/thememode')?>">
+		  <i class="bx bx-sm <?php echo session()->get('darkmode') ? "bx-sun":"bx-moon";?>"></i> 
+		</a>
+	  </li>
 
 	<!-- User -->
 	<li class="nav-item navbar-dropdown dropdown-user dropdown">
@@ -66,13 +72,13 @@ id="layout-navbar"
 		  <div class="dropdown-divider"></div>
 		</li>
 		<li>
-		  <a class="dropdown-item" href="#">
+		  <a class="dropdown-item" href="<?php echo base_url('user/profile')?>">
 			<i class="bx bx-user me-2"></i>
 			<span class="align-middle">My Profile</span>
 		  </a>
 		</li>
 		<li>
-		  <a class="dropdown-item" href="#">
+		  <a class="dropdown-item" href="<?php echo base_url('user/settings')?>">
 			<i class="bx bx-cog me-2"></i>
 			<span class="align-middle">Settings</span>
 		  </a>

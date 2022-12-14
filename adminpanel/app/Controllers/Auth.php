@@ -63,8 +63,9 @@ public function signincheck()
 				'email' => "required|valid_email" ,
 				'password' => "required"  			
 			])){
-				if($userRecord = $user->where('email', $this->request->getPost('email'))->where('password', md5($this->request->getPost('password')))->first()){
-					if($userRecord['email_verified'] == 1){
+				if($authUser = $user->where('email', $this->request->getPost('email'))->where('password', md5($this->request->getPost('password')))->first()){
+					if($authUser['email_verified'] == 1){
+						$userRecord = $user->get($authUser['id']);
 						$this->session->set($userRecord);
 						$this->session->set('isLogin', true);
 						$this->session->set('hash', md5(json_encode($userRecord)));
@@ -99,6 +100,7 @@ public function signincheck()
 			if ($this->validate([
 				'fname'  => 'required|alpha',
 				'lname'  => 'required|alpha',
+				'type'  => 'required|numeric|',
 				'mobile'  => 'required|numeric',
 				'email' => "required|valid_email|is_unique[users.email,user_id,{$user_id}]" ,
 				'password' => "required|min_length[$this->minPasswordLength]"  			
@@ -106,6 +108,7 @@ public function signincheck()
 				$userData = array(
 					'fname' => $this->request->getPost('fname'),
 					'lname' => $this->request->getPost('lname'),
+					'type' => $this->request->getPost('type'),
 					'email' => $this->request->getPost('email'),
 					'mobile' => $this->request->getPost('mobile'),
 					'password' => md5($this->request->getPost('password')),

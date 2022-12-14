@@ -21,6 +21,7 @@
 	<?php echo script_tag('public/js/jquery-confirm.min.js'); ?>
     <!-- Place this tag in your head or just before your close body tag. -->
 	<?php echo script_tag('https://buttons.github.io/buttons.js'); ?>
+	<?php echo script_tag('public/js/custom.js'); ?>
 	<script>
 	$(document).ready(function(e){
 		<?php if(session()->getFlashdata('message')): ?>

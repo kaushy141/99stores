@@ -13,7 +13,7 @@ class MyController extends BaseController
 	public $response;
 	public $logger;
 	public $email;
-	protected $helpers = ['form', 'url', 'html'];
+	protected $helpers = ['form', 'url', 'html', 'my'];
 	public $head = array(
 		"title" => "Welcome to My Indian Scholarship - India",
 		"description" => "Get chance to win up to 100% scholarship from My Indian Scholarship",

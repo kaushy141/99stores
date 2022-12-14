@@ -1,5 +1,5 @@
 <?=doctype();?>
-<html>
+<html class="light-style layout-navbar-fixed layout-menu-fixed <?php echo session()->get('collapse-menu') ? "layout-menu-collapsed":"";?>">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
@@ -46,10 +46,15 @@
 
     <!-- Icons. Uncomment required icon fonts -->
 	<?php echo link_tag('public/vendor/fonts/boxicons.css'); ?>
-
+	<?php echo link_tag('public/vendor/css/rtl/core.css'); ?>
     <!-- Core CSS -->	
 	<?php echo link_tag('public/vendor/css/core.css'); ?>
 	<?php echo link_tag('public/vendor/css/theme-default.css'); ?>
+	
+	<?php if(session()->get('darkmode')){?>
+	<?php echo link_tag('public/vendor/css/core-dark.css'); ?>
+	<?php echo link_tag('public/vendor/css/theme-default-dark.css'); ?>
+	<?php }?>
 	<?php echo link_tag('public/css/demo.css'); ?>
 
     <!-- Vendors CSS -->
@@ -59,6 +64,7 @@
     <!-- Page -->
 	<?php echo link_tag('public/vendor/css/pages/page-auth.css'); ?>
 	<?php echo link_tag('public/css/jquery-confirm.min.css'); ?>
+	<?php echo link_tag('public/css/pages/page-profile.css'); ?>
     <!-- Helpers -->
 	<?php echo script_tag('public/vendor/js/helpers.js'); ?>
 

@@ -23,9 +23,10 @@
 					  <input
 						type="text"
 						class="form-control"
+						maxlength="30"
 						id="fname"
 						name="fname"
-						placeholder="Enter your first name"
+						placeholder="Enter first name"
 						autofocus
 					  />
 					</div>
@@ -36,9 +37,10 @@
 					  <input
 						type="text"
 						class="form-control"
+						maxlength="30"
 						id="lname"
 						name="lname"
-						placeholder="Enter your last name"
+						placeholder="Enter last name"
 						autofocus
 					  />
 					</div>
@@ -46,11 +48,11 @@
 				</div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="mail" class="form-control" id="email" name="email" placeholder="Enter your email" />
+                  <input type="mail" class="form-control" id="email" name="email" maxlength="50" placeholder="Enter your email" />
                 </div>
 				<div class="mb-3">
                   <label for="mobile" class="form-label">Mobile Number</label>
-                  <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Enter your mobile number" />
+                  <input type="text" class="form-control" id="mobile" name="mobile" maxlength="10" placeholder="Enter your mobile number" />
                 </div>
                 <div class="mb-3 form-password-toggle">
                   <label class="form-label" for="password">Password</label>
@@ -58,12 +60,28 @@
                     <input
                       type="password"
                       id="password"
+					  maxlength="32"
                       class="form-control"
                       name="password"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                       aria-describedby="password"
                     />
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                  </div>
+                </div>
+				
+				<div class="mb-3">
+                  <label class="form-label" for="password">I am </label>
+                  <div class="input-group input-group-merge">
+							<div class="form-check">
+                            <input name="type" class="form-check-input" type="radio" checked value="2" id="user_type_donner">
+                            <label class="form-check-label" for="user_type_donner"> Donner </label>                            
+                          </div>
+						  <div class="form-check mx-3">
+							<input name="type" class="form-check-input" type="radio" value="3" id="user_type_student">
+                            <label class="form-check-label" for="user_type_student"> Student </label>
+                          </div>
+                    
                   </div>
                 </div>
 
