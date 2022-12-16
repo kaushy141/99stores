@@ -92,7 +92,7 @@ define('EVENT_PRIORITY_NORMAL', 100);
  * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_HIGH instead.
  */
 define('EVENT_PRIORITY_HIGH', 10);
-define('APP_NAME', 'My Indian Scholar');
+define('APP_NAME', '99 Stores.in');
 define('DEFAULT_EMAIL_CC', 'service@myindianscholar.com');
 define('DEFAULT_EMAIL_BCC', 'service@myindianscholar.com');
 define('DEFAULT_SENDER_EMAIL', 'service@myindianscholar.com');

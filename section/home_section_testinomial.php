@@ -1,8 +1,8 @@
 <!--Testimonials-->
 <div class="section section-lg bg-gray-150">
 <div class="text-center">
-  <p class="subtitle">Our customers love Beautyrel</p>
-  <h2 class="title">Rated #1 massage in New York</h2>
+  <p class="subtitle">Our customers love our work</p>
+  <h2 class="title">Rated #1 Service in India</h2>
   <div class="subtitle-box">
 	<div class="subtitle-box-text">Reviews from:</div>
 	<div class="subtitle-box-media"><img src="images/title-img-153x38.png" alt="" width="153" height="38"/>

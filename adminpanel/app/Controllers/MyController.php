@@ -34,8 +34,25 @@ class MyController extends BaseController
 
         // E.g.: $this->session = \Config\Services::session();
 		$this->session = \Config\Services::session();
-		helper($this->helpers);
+		helper($this->helpers);	
+		
+		if(!$this->session->get('isLogin') && $this->isSecurePage()){
+			$this->setFlashMessage('Unauthorised request.', 'warning');
+			return $this->response->redirect(site_url('auth/signin'));
+		}
+		
     }
+	
+	private function checkSession(){
+		if(!$this->session->get('isLogin') && $this->isSecurePage()){
+			$this->setFlashMessage('Unauthorised request.', 'warning');
+			return $this->response->redirect(site_url('auth/signin'));
+		}
+	}
+	
+	private function isSecurePage(){
+		return class_basename(service('router')->controllerName()) != 'Auth';
+	}
 	
     public function publicView($page, $data = array(), $head=array(), $foot=array())
     {
@@ -44,6 +61,7 @@ class MyController extends BaseController
 	
 	public function adminView($page, $data = array(), $head=array(), $foot=array())
     {
+	   $this->checkSession();
 	   if($this->session->get('isLogin'))
 	   {
 		   return view('_templates/header', $head)

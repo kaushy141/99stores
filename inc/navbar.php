@@ -8,39 +8,39 @@
 		  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
 		  <!--RD Navbar Brand-->
 		  <div class="rd-navbar-brand">
-			<!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-428x112.png" alt="" width="214" height="56"/><img class="brand-logo-light" src="images/logo-inverse-430x112.png" alt="" width="215" height="56"/></a>
+			<!--Brand--><a class="brand" href="index.php"><img class="brand-logo-dark" src="images/logo-default-428x112.png" alt="" width="214" height="56"/><img class="brand-logo-light" src="images/logo-inverse-430x112.png" alt="" width="215" height="56"/></a>
 		  </div>
 		</div>
 		<div class="rd-navbar-main-element">
 		  <div class="rd-navbar-nav-wrap">
 			<ul class="rd-navbar-nav">
-			  <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+			  <li class="rd-nav-item <?php activateMenu('index');?>"><a class="rd-nav-link" href="index.php">Home</a>
 			  </li>
-			  <li class="rd-nav-item"><a class="rd-nav-link" href="gift-vouchers.html">Gift Vouchers</a>
+			  <li class="rd-nav-item <?php activateMenu('gift-vouchers');?>"><a class="rd-nav-link" href="gift-vouchers.php">Gift Vouchers</a>
 			  </li>
-			  <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
+			  <li class="rd-nav-item" <?php activateMenu('about');?>><a class="rd-nav-link" href="about.php">About</a>
 			  </li>
-			  <li class="rd-nav-item"><a class="rd-nav-link" href="massage.html">Massage</a>
+			  <li class="rd-nav-item" <?php activateMenu('message');?>><a class="rd-nav-link" href="message.php">Message</a>
 				<ul class="rd-menu rd-navbar-dropdown">
-				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-massage.html">Single Massage</a>
+				  <li class="rd-dropdown-item <?php activateMenu('index');?>"><a class="rd-dropdown-link" href="single-massage.php">Single Massage</a>
 				  </li>
 				</ul>
 			  </li>
-			  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+			  <li class="rd-nav-item <?php activateMenu('contacts');?>"><a class="rd-nav-link" href="contacts.php">Contacts</a>
 			  </li>
 			  <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
 				<ul class="rd-menu rd-navbar-dropdown">
-				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="typography.html">Typography</a>
+				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Typography</a>
 				  </li>
-				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="buttons.html">Buttons</a>
+				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Buttons</a>
 				  </li>
-				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="forms.html">Forms</a>
+				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Forms</a>
 				  </li>
-				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="tabs-and-accordions.html">Tabs and accordions</a>
+				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Tabs and accordions</a>
 				  </li>
-				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="privacy-policy.html">Privacy policy</a>
+				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Privacy policy</a>
 				  </li>
-				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="under-construction.html">Under Construction</a>
+				  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Under Construction</a>
 				  </li>
 				</ul>
 			  </li>

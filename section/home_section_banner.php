@@ -5,15 +5,15 @@
   <div class="container wide">
 	<div class="row justify-content-left">
 	  <div class="col-lg-5">
-		<h1 data-caption-animate="fadeInUp" data-caption-delay="100">Massage <br class="br-none"> On Demand</h1>
-		<p class="lead text-custom-blue" data-caption-animate="fadeInUp" data-caption-delay="250">Are you tired and exhausted? Do you need to relax and tidy up your body and health? Try our massage today!</p>
+		<h1 data-caption-animate="fadeInUp" data-caption-delay="100">Services <br class="br-none"> On Demand</h1>
+		<p class="lead text-custom-blue" data-caption-animate="fadeInUp" data-caption-delay="250">Are you looking and searching? Do you need to services at your home or your work place? Try our service today!</p>
 		<div class="btn-wrap">
-		  <div class="group-xxl group-middle"><a class="button button-primary button-md button-round-2" href="#" data-caption-animate="fadeInUp" data-caption-delay="450"> Book Now</a><a class="button button-white button-md button-round-2" href="#" data-caption-animate="fadeInUp" data-caption-delay="450">Buy As Gift</a></div>
+		  <div class="group-xxl group-middle"><a class="button button-primary button-md button-round-2" href="#" data-caption-animate="fadeInUp" data-caption-delay="450"> Book Now</a><a class="button button-white button-md button-round-2" href="#" data-caption-animate="fadeInUp" data-caption-delay="450">Let us know</a></div>
 		</div>
 		<div class="phone-wrap phone-wrap-2">
-		  <div class="phone-link-title">P:</div><a class="phone-link" href="tel:#"> 1 000 234 7890</a>
+		  <div class="phone-link-title"><i class="fa fa-fw fa-phone"></i></div><a class="phone-link" href="tel:#"> 9898989898</a>
 		</div>
-		<p class="text-custom-blue">178 West 27th Street, Suite 527, New York NY 10012, United States</p>
+		<p class="text-custom-blue">Fatehpur, Uttar Pradesh India - 226017</p>
 	  </div>
 	</div>
   </div>

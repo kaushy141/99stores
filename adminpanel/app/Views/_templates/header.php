@@ -56,17 +56,22 @@
 	<?php echo link_tag('public/vendor/css/theme-default-dark.css'); ?>
 	<?php }?>
 	<?php echo link_tag('public/css/demo.css'); ?>
-
     <!-- Vendors CSS -->
 	<?php echo link_tag('public/vendor/libs/perfect-scrollbar/perfect-scrollbar.css'); ?>
+	<?php echo link_tag('public/vendor/libs/flatpickr/flatpickr.css'); ?>
+	<?php echo link_tag('public/vendor/libs/bs-stepper/bs-stepper.css'); ?>
+
     <!-- Page CSS -->
 	<?php echo link_tag('public/vendor/libs/apex-charts/apex-charts.css'); ?>
     <!-- Page -->
 	<?php echo link_tag('public/vendor/css/pages/page-auth.css'); ?>
 	<?php echo link_tag('public/css/jquery-confirm.min.css'); ?>
 	<?php echo link_tag('public/css/pages/page-profile.css'); ?>
+	<?php echo link_tag('public/css/select2.css'); ?>
+	<?php echo link_tag('public/vendor/libs/FormValidation/FormValidation.min.css'); ?>
     <!-- Helpers -->
 	<?php echo script_tag('public/vendor/js/helpers.js'); ?>
+	<?php echo script_tag('public/vendor/js/template-customizer.js'); ?>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->

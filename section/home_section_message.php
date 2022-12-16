@@ -3,8 +3,8 @@
 	<div class="container wide">
 	  <!--.divider-->
 	  <div class="text-center">
-		<div class="subtitle">A massage for any occasion</div>
-		<h2 class="title">Choose Your Massage</h2>
+		<div class="subtitle">A Service for any occasion</div>
+		<h2 class="title">Choose Your Services</h2>
 	  </div>
 	  <div class="row row-60">
 		<div class="col-xs-10 col-md-6 col-lg-4">

@@ -11,12 +11,12 @@ class User extends MyController
 	public function thememode()
     {
 		$this->session->set('darkmode', !$this->session->get('darkmode'));
-		return $this->response->redirect(site_url('dashboard/index'));  
+		return $this->response->redirect($this->request->getUserAgent()->getReferrer());  
     }
 	public function layoutcollapse()
     {
-		$this->session->set('collapse-menu', !$this->session->get('collapse-menu'));
-		return $this->response->redirect(site_url('dashboard/index'));  
+		$this->session->set('collapse-menu', !$this->session->get('collapse-menu'));		
+		return $this->response->redirect($this->request->getUserAgent()->getReferrer());
     }
 	
 	public function delete($id)
@@ -26,11 +26,33 @@ class User extends MyController
 			$user->update($id, ['status'=>'Deleted']);
 			$user->delete($id);
 			$this->setFlashMessage('User deleted successfull.', 'success');
-			//return $this->response->redirect($this->request->getUserAgent()->referrer());
-			return $this->response->redirect(site_url('dashboard/index')); 
+			return $this->response->redirect($this->request->getUserAgent()->getReferrer());
 		}else{
 			$this->setFlashMessage('Permission denined.', 'danger');
 			return $this->response->redirect(site_url('dashboard/index')); 
+		}
+    }
+	
+	public function registration()
+    {
+		if($this->session->get('type') == USER_TYPE_ADMIN){
+			echo $this->adminView('user/registration', [], $this->head);
+			
+		}else{
+			$this->setFlashMessage('Permission denined.', 'danger');			
+			return $this->response->redirect($this->request->getUserAgent()->getReferrer());
+		}
+    }
+	
+	public function edit($id)
+    {
+		if($this->session->get('type') == USER_TYPE_ADMIN){
+			$user = model(UserModel::class);
+			$userData = $user->get($id);
+			echo $this->adminView('user/edit', ['user'=>$userData], $this->head);
+		}else{
+			$this->setFlashMessage('Permission denined.', 'danger');			
+			return $this->response->redirect($this->request->getUserAgent()->getReferrer());
 		}
     }
 	
