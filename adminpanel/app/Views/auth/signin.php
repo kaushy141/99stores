@@ -1,13 +1,13 @@
    <!-- Content -->
 
-    <div class="container-xxl">
-      <div class="authentication-wrapper authentication-basic container-p-y">
+    <div class="container-xxl d-flex justify-content-center">
+      <div class="authentication-wrapper authentication-basic container-xs py-2">
         <div class="authentication-inner">
           <!-- Register -->
           <div class="card">
             <div class="card-body">
               <!-- Logo -->
-              <div class="app-brand justify-content-center">
+              <div class="app-brand">
                 <a href="index.html" class="app-brand-link gap-2">
                   <span class="app-brand-logo demo">
                     <?= img(array("src"=>"public/img/logo.png", "height"=>60))?>
