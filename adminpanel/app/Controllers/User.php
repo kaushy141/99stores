@@ -49,7 +49,6 @@ class User extends MyController
 	
 	public function add()
     {
-		print_r($_POST);die;
 		if($this->request->getMethod() === 'post')
 		{
 			$user = model(UserModel::class);
@@ -91,7 +90,7 @@ class User extends MyController
 				
 				if($user_id = $user->insert($userData)){
 					if($this->request->getPost('skills')){
-						$user->saveSkills($user_id, $this->request->getPost('skills'))
+						$user->saveSkills($user_id, $this->request->getPost('skills'));
 					}
 					if($this->request->getPost('identities') && $this->request->getPost('identity_value')){
 						$user->saveIdentities($user_id, $this->request->getPost('identities'), $this->request->getPost('identity_value'));
@@ -105,7 +104,7 @@ class User extends MyController
 						$this->request->getPost('state'), 
 						$this->request->getPost('country'), 
 						$this->request->getPost('pincode')
-						)
+						);
 					
 					$this->setFlashMessage('User created successfully.', 'success');
 					return $this->response->redirect(site_url('user/registration'));

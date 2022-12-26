@@ -33,12 +33,13 @@ class MyController extends BaseController
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
-		$this->session = \Config\Services::session();
+		$this->session = \Config\Services::session();		
 		helper($this->helpers);	
 		
-		if(!$this->session->get('isLogin') && $this->isSecurePage()){
+		if($this->session->get('isLogin') === NULL && $this->isSecurePage()){
 			$this->setFlashMessage('Unauthorised request.', 'warning');
 			return $this->response->redirect(site_url('auth/signin'));
+			exit;
 		}
 		
     }
@@ -61,9 +62,6 @@ class MyController extends BaseController
 	
 	public function adminView($page, $data = array(), $head=array(), $foot=array())
     {
-	   $this->checkSession();
-	   if($this->session->get('isLogin'))
-	   {
 		   return view('_templates/header', $head)
 		   .view('_templates/admin-layout-wrapper-open', $data)
 		   .view('_templates/admin-aside', $data)
@@ -72,11 +70,7 @@ class MyController extends BaseController
 		   .view($page, $data)
 		   .view('_templates/admin-content-wrapper-close', $data)
 		   .view('_templates/admin-layout-wrapper-close', $data)
-		   .view('_templates/footer', $foot);
-	   }else{
-		   $this->setFlashMessage('Unauthorized access', 'danger');
-		   return $this->response->redirect(site_url('auth/signin'));	
-	   }
+		   .view('_templates/footer', $foot);	   
     }
 	
 	public function emailView($page, $data = array())
