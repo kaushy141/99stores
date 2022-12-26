@@ -13,16 +13,16 @@ class MyController extends BaseController
 	public $response;
 	public $logger;
 	public $email;
-	protected $helpers = ['form', 'url', 'html', 'my'];
+	protected $helpers = ['form', 'url', 'html', 'my', 'date'];
 	public $head = array(
-		"title" => "Welcome to My Indian Scholarship - India",
-		"description" => "Get chance to win up to 100% scholarship from My Indian Scholarship",
+		"title" => "Welcome to ".APP_NAME." - India",
+		"description" => "Get details about ".APP_NAME,
 		"image" => "",
-		"site_name" => "My Indian Scholarship",
-		"url" =>"https://www.myindiascholarship.in",
+		"site_name" => APP_NAME,
+		"url" =>APP_CANONICAL_URL,
 		"type" =>"website",
-		"page_name" =>"My Indian Scholarship",
-		"author" =>"My Indian Scholarship"
+		"page_name" =>APP_NAME,
+		"author" =>APP_NAME
 	);
 	
 	public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)

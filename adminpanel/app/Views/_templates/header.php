@@ -69,13 +69,22 @@
 	<?php echo link_tag('public/css/pages/page-profile.css'); ?>
 	<?php echo link_tag('public/css/select2.css'); ?>
 	<?php echo link_tag('public/vendor/libs/FormValidation/FormValidation.min.css'); ?>
+
+	<!-- Dropzone -->
+	<?php echo link_tag('public/vendor/libs/dropzone/dropzone.css'); ?>
+	<!-- quill -->
+	<?php echo link_tag('public/vendor/libs/quill/typography.css'); ?>
+	<?php echo link_tag('public/vendor/libs/quill/katex.css'); ?>
+	<?php echo link_tag('public/vendor/libs/quill/editor.css'); ?>
     <!-- Helpers -->
 	<?php echo script_tag('public/vendor/js/helpers.js'); ?>
-	<?php echo script_tag('public/vendor/js/template-customizer.js'); ?>
+	<?php echo script_tag('public/js/template-customizer.js'); ?>
+	
+    <!-- build:js assets/vendor/js/core.js -->
+	<?php echo script_tag('public/vendor/libs/jquery/jquery.js'); ?>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
 	<?php echo script_tag('public/js/config.js'); ?>
-	<script src="https://kit.fontawesome.com/957a43b0fe.js" crossorigin="anonymous"></script>
   </head>
   <body>
