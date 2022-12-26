@@ -11,14 +11,14 @@ class User extends MyController
 	public function thememode()
     {
 		$this->session->set('darkmode', !$this->session->get('darkmode'));
-		return $this->response->redirect($this->request->getUserAgent()->getReferrer());  
+		return $this->response->redirect($this->request->getUserAgent()->getReferrer());
     }
 	public function layoutcollapse()
     {
-		$this->session->set('collapse-menu', !$this->session->get('collapse-menu'));		
+		$this->session->set('collapse-menu', !$this->session->get('collapse-menu'));
 		return $this->response->redirect($this->request->getUserAgent()->getReferrer());
     }
-	
+
 	public function delete($id)
     {
 		if($this->session->get('type') == USER_TYPE_ADMIN){
@@ -29,36 +29,50 @@ class User extends MyController
 			return $this->response->redirect($this->request->getUserAgent()->getReferrer());
 		}else{
 			$this->setFlashMessage('Permission denined.', 'danger');
-			return $this->response->redirect(site_url('dashboard/index')); 
+			return $this->response->redirect(site_url('dashboard/index'));
 		}
     }
-	
-	public function registration()
+
+	public function registration($user_id=0)
     {
 		if($this->session->get('type') == USER_TYPE_ADMIN){
 			$user = model(UserModel::class);
+			$data = [];
+			if($user_id){
+				$data = $user->get($user_id);
+				$data['skills'] = array_column($user->getUserSkills($user_id), 'skill_id');
+				$identity = $user->getUserIdentities($user_id);
+				$address = $user->getUserAddress($user_id, $data['address_id']);
+				if($identity){
+					$data = array_merge($data, $identity);
+				}
+				if($address){
+					$data = array_merge($data, array_intersect_key($address, array_flip(array('line1', 'line2', 'district', 'state', 'country', 'pincode'))));
+				}
+				$this->head['title'] = "{$data['fname']} {$data['lname']} Information";
+			}
 			$skills = $user->getSkillsList();
 			$identities = $user->getIdentitiesList();
-			echo $this->adminView('user/registration', ['skills' => $skills, 'identities' => $identities], $this->head);
-			
+			$states = $user->getStatesList();
+			echo $this->adminView('user/registration', ['skills' => $skills, 'states'=>$states, 'identities' => $identities, 'data'=>$data], $this->head);
+
 		}else{
-			$this->setFlashMessage('Permission denined.', 'danger');			
+			$this->setFlashMessage('Permission denined.', 'danger');
 			return $this->response->redirect($this->request->getUserAgent()->getReferrer());
 		}
     }
-	
-	public function add()
+
+	public function save($user_id)
     {
+		$newUser = !$user_id;
 		if($this->request->getMethod() === 'post')
 		{
 			$user = model(UserModel::class);
-			if ($this->validate([
+			$validationArray = [
 				'fname'  => 'required|alpha',
 				'lname'  => 'required|alpha',
-				'type'  => 'required|numeric',
 				'mobile'  => 'required|numeric|exact_length[10]',
-				'email' => "required|valid_email|is_unique[users.email,user_id,{$user_id}]" ,
-				'password' => "required|min_length[$this->minPasswordLength]", 
+				'email' => "required|valid_email|is_unique[users.email,id,{$user_id}]",
 				'line1' => "alpha_numeric_punct",
 				'line2' => "alpha_numeric_punct",
 				'district' => "alpha_space",
@@ -66,14 +80,18 @@ class User extends MyController
 				'country' => "alpha_space",
 				'pincode' => "numeric|exact_length[6]",
 				'charges' => "numeric",
-			])){
+			];
+			if($user_id == 0){
+				$validationArray['password'] = "required|min_length[".APP_MIN_PASS_LENGTH."]";
+			}
+			if ($this->validate($validationArray)){
 				$userData = array(
 					'fname' => $this->request->getPost('fname'),
+					'mname' => $this->request->getPost('mname'),
 					'lname' => $this->request->getPost('lname'),
 					'type' => 2,
 					'email' => $this->request->getPost('email'),
 					'mobile' => $this->request->getPost('mobile'),
-					'password' => md5($this->request->getPost('password')),
 					'line1' => $this->request->getPost('line1'),
 					'line2' => $this->request->getPost('line2'),
 					'district' => $this->request->getPost('district'),
@@ -84,50 +102,74 @@ class User extends MyController
 					'email_verified' => 1,
 					'mobile_verified' => 1,
 					'created_date' => time(),
-					'image' => $user->defaultImage, 
+					'image' => $user->defaultImage,
 					'status' => $user->verified
-				);			
-				
-				if($user_id = $user->insert($userData)){
+				);
+
+				if($user_id == 0){
+					$userData = array_merge($userData, array(
+						'email_verified' => 1,
+						'mobile_verified' => 1,
+						'image' => $user->defaultImage,
+						'status' => $user->active
+						)
+					);
+					$user_id = $user->insert($userData);
+				}
+				else{
+					if($this->request->getPost('password')){
+						$userData['password'] = md5($this->request->getPost('password'));
+					}
+					$user->update($user_id,$userData);
+				}
+				if($user_id){
 					if($this->request->getPost('skills')){
 						$user->saveSkills($user_id, $this->request->getPost('skills'));
 					}
-					if($this->request->getPost('identities') && $this->request->getPost('identity_value')){
-						$user->saveIdentities($user_id, $this->request->getPost('identities'), $this->request->getPost('identity_value'));
+					if($this->request->getPost('identity_id') && $this->request->getPost('identity_value')){
+						$user->saveIdentities($user_id, $this->request->getPost('identity_id'), $this->request->getPost('identity_value'));
 					}
-					
+
 					$user->saveAddress(
-						$user_id, 
-						$this->request->getPost('line1'), 
-						$this->request->getPost('line2'), 
-						$this->request->getPost('district'), 
-						$this->request->getPost('state'), 
-						$this->request->getPost('country'), 
+						$user_id,
+						$this->request->getPost('line1'),
+						$this->request->getPost('line2'),
+						$this->request->getPost('district'),
+						$this->request->getPost('state'),
+						$this->request->getPost('country'),
 						$this->request->getPost('pincode')
-						);
-					
-					$this->setFlashMessage('User created successfully.', 'success');
-					return $this->response->redirect(site_url('user/registration'));
+					);
+
+					$this->setFlashMessage($newUser ? 'User created successfully.' : 'User updated successully', 'success');
+					return $this->response->redirect(site_url("user/registration/{$user_id}"));
 				}
+			}else{
+				print_r($this->validator->listErrors());die;
+				$this->setFlashMessage($this->validator->listErrors(), 'warning');
+				return $this->response->redirect(site_url('user/registration'));
 			}
 		}
     }
-	public function edit($id)
-    {
-		if($this->session->get('type') == USER_TYPE_ADMIN){
-			$user = model(UserModel::class);
-			$userData = $user->get($id);
-			echo $this->adminView('user/edit', ['user'=>$userData], $this->head);
-		}else{
-			$this->setFlashMessage('Permission denined.', 'danger');			
-			return $this->response->redirect($this->request->getUserAgent()->getReferrer());
-		}
-    }
-	
-	public function donner()
+
+	public function admin()
     {
 		$user = model(UserModel::class);
-		$donnerList = $user->getList(USER_TYPE_ADMIN);
-		echo $this->adminView('user/donnerlist', ['donnerList' =>$donnerList], $this->head);
+		$userlist = $user->getList(USER_TYPE_ADMIN);
+		$this->head['title'] = "Admin List Accounts";
+		echo $this->adminView('user/userlist', ['userlist' =>$userlist], $this->head);
+    }
+	public function vendor()
+    {
+		$user = model(UserModel::class);
+		$userlist = $user->getList(USER_TYPE_VENDOR);
+		$this->head['title'] = "Vendor List Accounts";
+		echo $this->adminView('user/userlist', ['userlist' =>$userlist], $this->head);
+    }
+	public function customer()
+    {
+		$user = model(UserModel::class);
+		$userlist = $user->getList(USER_TYPE_CUSTOMER);
+		$this->head['title'] = "Customer List Accounts";
+		echo $this->adminView('user/userlist', ['userlist' =>$userlist], $this->head);
     }
 }

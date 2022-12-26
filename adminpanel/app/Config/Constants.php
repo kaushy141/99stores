@@ -93,11 +93,14 @@ define('EVENT_PRIORITY_NORMAL', 100);
  */
 define('EVENT_PRIORITY_HIGH', 10);
 define('APP_NAME', '99 Stores.in');
+define('APP_CANONICAL_URL', 'https://www.99stores.in');
 define('DEFAULT_EMAIL_CC', 'service@myindianscholar.com');
 define('DEFAULT_EMAIL_BCC', 'service@myindianscholar.com');
 define('DEFAULT_SENDER_EMAIL', 'service@myindianscholar.com');
 define('DEFAULT_SENDER_NAME', 'Service');
 
 define('USER_TYPE_ADMIN', 1);
-define('USER_TYPE_DONNER', 2);
-define('USER_TYPE_STUDENT', 3);
+define('USER_TYPE_VENDOR', 2);
+define('USER_TYPE_CUSTOMER', 3);
+
+define('APP_MIN_PASS_LENGTH', 8);

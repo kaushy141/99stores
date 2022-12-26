@@ -5,7 +5,7 @@ use App\Models\UserModel;
 use App\Models\VerifiactionModel;
 class Auth extends MyController
 {
-	public $minPasswordLength = 8;
+	public $minPasswordLength = APP_MIN_PASS_LENGTH;
 	public function signin()
     {
         $this->head['title'] = "Sign in to your account";
@@ -29,6 +29,8 @@ class Auth extends MyController
 	public function logout($hash='')
 	{
 		if($hash == $this->session->get('hash')){
+			$user = model(UserModel::class);
+			$user->logLogout($this->session->get('log-login'));
 			$this->session->destroy();
 			$this->setFlashMessage('Logout successfull', 'success');
 			return $this->response->redirect(site_url('auth/signin'));	
@@ -70,6 +72,8 @@ public function signincheck()
 						$this->session->set('isLogin', true);
 						$this->session->set('hash', md5(json_encode($userRecord)));
 						$this->setFlashMessage('Signin successfull.', 'success');
+						$this->session->set('log-login', $user->logLogin($this->request, $userRecord['id']));
+						$user->addActivity($this->request, $userRecord['id'], "Signin successfull", "Account", "Primary");
 						return $this->response->redirect(site_url('dashboard/index'));
 					}else{
 						$this->setFlashMessage('Email is not verified yet. Please check email or Click to <a href="'.base_url('auth/resetpassword').'">Reset Password</a>', 'warning');
@@ -102,7 +106,7 @@ public function signincheck()
 				'lname'  => 'required|alpha',
 				'type'  => 'required|numeric|',
 				'mobile'  => 'required|numeric',
-				'email' => "required|valid_email|is_unique[users.email,user_id,{$user_id}]" ,
+				'email' => "required|valid_email|is_unique[users.email,id,{$user_id}]" ,
 				'password' => "required|min_length[$this->minPasswordLength]"  			
 			])){
 				$userData = array(
