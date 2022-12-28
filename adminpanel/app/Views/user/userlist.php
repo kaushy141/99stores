@@ -14,13 +14,13 @@
 		  </tr>
 		</thead>
 		<tbody class="table-border-bottom-0">
-		<?php 
+		<?php
 		if(!empty($userlist)){
 			foreach($userlist as $user){
 		?>
 		  <tr>
-			<td><i class="fab fa-angular fa-lg text-danger me-3"></i><strong><?= img(array("src"=>$user['image'], "class"=>"w-px-40 h-auto rounded-circle"))?></strong></td>
-			<td><?php echo $user['fname']?> <?php echo $user['lname']?></td>                        
+			<td><i class="fab fa-angular fa-lg text-danger me-3"></i><strong><?= img(array("src"=>WRITEPATH.$user['image'], "class"=>"w-px-40 h-auto rounded-circle"))?></strong></td>
+			<td><?php echo $user['fname']?> <?php echo $user['lname']?></td>
 			<td><span class="badge bg-label-primary me-1"><?php echo $user['type_name']?></span></td>
 			<td><span class="badge bg-label-primary me-1"><?php echo dateView($user['created_date'])?></span></td>
 			<th><span class="badge bg-label-<?php echo statusClass($user['status'])?> me-1"><?php echo $user['status']?></span></th>
@@ -35,12 +35,12 @@
 					<a href="<?php echo base_url("user/registration/{$user['id']}")?>" class="dropdown-item"><i class="bx bx-edit"></i> Edit</a>
 					<a href="<?php echo base_url("user/delete/{$user['id']}")?>" class="delete-record dropdown-item"><i class="bx bx-trash"></i> Delete</a>
 				</div>
-			</div>			  
+			</div>
 			</td>
 		  </tr>
 			<?php }
 		}?>
-		  
+
 		</tbody>
 	  </table>
 	</div>

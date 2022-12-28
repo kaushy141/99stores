@@ -4,38 +4,34 @@ namespace App\Controllers;
 
 class Store extends MyController
 {
-    public function profile()
-    {
-        echo $this->adminView('store/profile', array(), $this->head);
-    }
-		
-	public function registration($store_id=0)
-    {
-		if($this->session->get('type') == USER_TYPE_ADMIN){
+	public function profile()
+	{
+		echo $this->adminView('store/profile', array(), $this->head);
+	}
+
+	public function registration($store_id = 0)
+	{
+		if ($this->session->get('type') == USER_TYPE_ADMIN) {
 			$user = model(UserModel::class);
 			$store = model(StoreModel::class);
 			$data = [];
 			$this->head['title'] = "Add new Store";
-			if($store_id){
+			if ($store_id) {
 				$data = $store->get($store_id);
 				$this->head['title'] = "{$data['name']} Information";
 			}
 			$states = $user->getStatesList();
-			echo $this->adminView('store/registration', ['states'=>$states, 'data'=>$data], $this->head);
-			
-		}else{
-			$this->setFlashMessage('Permission denined.', 'danger');			
+			echo $this->adminView('store/registration', ['states' => $states, 'data' => $data], $this->head);
+		} else {
+			$this->setFlashMessage('Permission denined.', 'danger');
 			return $this->response->redirect($this->request->getUserAgent()->getReferrer());
 		}
-    }
-	
-	public function save($store_id=0)
-    {
-		//print_r($_POST);die;
+	}
+
+	public function save($store_id = 0)
+	{
 		$newStore = !$store_id;
-		if($this->request->getMethod() === 'get')
-		{ 
-			//`name`, `mobile`, `dealer`, `image`, `about`, `line1`, `line2`, `city`, `district`, `state`, `country`, `position`, `status`
+		if ($this->request->getMethod() === 'post') {
 			$store = model(StoreModel::class);
 			$validationArray = [
 				'name'  => 'required|alpha',
@@ -48,9 +44,10 @@ class Store extends MyController
 				'state' => "alpha_space",
 				'country' => "alpha_space",
 				'position' => "numeric",
-				'status' => "numeric",
+				'status' => "numeric|permit_empty",
+				'image' => 'uploaded[image]|max_size[image,2000]'
 			];
-			if ($this->validate($validationArray)){
+			if ($this->validate($validationArray)) {
 				$storeData = array(
 					'name' => $this->request->getPost('name'),
 					'mobile' => $this->request->getPost('mobile'),
@@ -64,37 +61,41 @@ class Store extends MyController
 					'position' => $this->request->getPost('position'),
 					'status' => $this->request->getPost('status')
 				);
-				print_r($storeData);die;
-				if($store_id == 0){
-					$storeData = array_merge($storeData, array(
-						'created_date' => time(),
-						)
-					);
+				if ($store_id == 0) {
+					$storeData['created_date'] = time();
 					$store_id = $store->insert($storeData);
+				} else {
+					$store->update($store_id, $storeData);
 				}
-				else{
-					$store->update($store_id,$storeData);
-				}	
-				if($store_id){					
+				#=============File Upload====================================
+				if ($file = $this->request->getFile('image')) {
+					if ($path = $file->store(getFolderName('store'))) {
+						$store->update($store_id, ['image' => $path]);
+					}
+				}
+				#============================================================
+				if ($store_id) {
 					$this->setFlashMessage($newStore ? 'Store created successfully.' : 'Store updated successully', 'success');
 					return $this->response->redirect(site_url("store/registration/{$store_id}"));
 				}
-			}else{
-				print_r($this->validator->listErrors());die;
+				else{
+					$this->setFlashMessage('Unable to Save Store', 'warning');
+					return $this->response->redirect(site_url("store/registration/{$store_id}"));
+				}
+			} else {
 				$this->setFlashMessage($this->validator->listErrors(), 'warning');
 				return $this->response->redirect(site_url("store/registration/{$store_id}"));
 			}
-		}
-		else{
+		} else {
 			$this->setFlashMessage('Unauthorised attempt.', 'warning');
-			return $this->response->redirect(site_url("store/registration/".($store_id ? $store_id:"")));
+			return $this->response->redirect(site_url("store/registration/" . ($store_id ? $store_id : "")));
 		}
-    }
-		
+	}
+
 	public function list()
-    {
+	{
 		$store = model(StoreModel::class);
 		$storelist = $store->getList();
-		echo $this->adminView('store/storelist', ['storelist' =>$storelist], $this->head);
-    }
+		echo $this->adminView('store/storelist', ['storelist' => $storelist], $this->head);
+	}
 }

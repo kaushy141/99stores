@@ -44,7 +44,7 @@ $routes->get('/auth/verification/(:token)', 'Auth::verification/$1');
 
 $routes->post('/auth/signincheck', 'Auth::signincheck');
 //$routes->post('/auth/signupcheck', 'Auth::signupcheck');
-
+//$routes->post('/store/save/(:id)', 'Store::save');
 
 /*
  * --------------------------------------------------------------------

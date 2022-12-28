@@ -12,7 +12,7 @@ class UserModel extends MyModel {
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-	protected $allowedFields = ['type', 'fname', 'mname', 'lname', 'email', 'mobile', 'password', 'address', 'city', 'state', 'country', 'image', 'email_verified', 'mobile_verified', 'charges', 'updated_date', 'deleted_date', 'status'];
+	protected $allowedFields = ['type', 'fname', 'mname', 'lname', 'email', 'mobile', 'password', 'address_id', 'city', 'state', 'country', 'image', 'email_verified', 'mobile_verified', 'charges', 'updated_date', 'deleted_date', 'status'];
     protected $useTimestamps = false;
     protected $createdField  = 'created_date';
     protected $updatedField  = 'updated_date';
@@ -25,8 +25,8 @@ class UserModel extends MyModel {
 	protected $active = 'Active';
 	protected $unverified = 'Unverified';
 	protected $deleted = 'Deleted';
-	
-	
+
+
 	public function get($user_id)
 	{
 		$builder = $this->db->table($this->table);
@@ -49,7 +49,7 @@ class UserModel extends MyModel {
 		$builder->where(["id" => $logLogin]);
 		$builder->update(["logout_time" => date('Y-m-d H:i:s')]);
 		//echo $this->db->getLastQuery();die;
-	}	
+	}
 
 	public function addActivity($request, $user_id, $content, $title=null, $variant='default', $link=null)
 	{
@@ -57,18 +57,18 @@ class UserModel extends MyModel {
 		$builder->insert(["user_id" => $user_id, "title" => $title, "content" => $content, "variant" => $variant, "link" => $link, "ip_address" => $_SERVER['REMOTE_ADDR'], "device" => $this->getDevice($request) ]);
 		///echo $this->db->getLastQuery();die;
 	}
-	
+
 	public function getList($type=0)
 	{
 		$builder = $this->db->table($this->table);
-		$builder->select("{$this->table}.id, {$this->table}.fname, {$this->table}.mname, {$this->table}.lname, {$this->table}.email, {$this->table}.mobile, {$this->table}.created_date, {$this->table}.status, user_types.type_name");
+		$builder->select("{$this->table}.id, {$this->table}.fname, {$this->table}.mname, {$this->table}.lname, {$this->table}.email, {$this->table}.image, {$this->table}.mobile, {$this->table}.created_date, {$this->table}.status, user_types.type_name");
 		$builder->join("user_types", "user_types.type_id = {$this->table}.type");
 		if($type)
 		$builder->where("{$this->table}.type", $type);
 		$query = $builder->get();
 		return $query->getResultArray();
 	}
-	
+
 	public function getSkillsList()
 	{
 		$builder = $this->db->table("skills");
@@ -78,7 +78,7 @@ class UserModel extends MyModel {
 		$query = $builder->get();
 		return $query->getResultArray();
 	}
-	
+
 	public function getIdentitiesList()
 	{
 		$builder = $this->db->table("identities");
@@ -99,7 +99,7 @@ class UserModel extends MyModel {
 		return $query->getResultArray();
 	}
 
-	public function getUserSkills($user_id){		
+	public function getUserSkills($user_id){
 		$builder = $this->db->table("user_skills");
 		$builder->select("skill_id");
 		$builder->where("user_id", $user_id);
@@ -133,19 +133,19 @@ class UserModel extends MyModel {
 		else
 		return $query->getResultArray();
 	}
-		
+
 	public function saveSkills($user_id, $skills)
 	{
-		$availableSkills = $this->getSkillsList();		
+		$availableSkills = $this->getSkillsList();
 		$userSkills =  $this->getUserSkills($user_id);
 		$newSkills = array_diff($skills, array_column($userSkills, 'skill_id'));
 		$deleteSkills = array_diff(array_column($userSkills, 'skill_id'), $skills);
-		
+
 		foreach($newSkills as $skill_id){
 			$builder = $this->db->table("user_skills");
 			$builder->insert(["skill_id" => $skill_id, "user_id" => $user_id ]);
 		}
-		
+
 		foreach($deleteSkills as $skill_id){
 			$builder = $this->db->table("user_skills");
 			$builder->where('user_id', $user_id);
@@ -153,11 +153,11 @@ class UserModel extends MyModel {
 			$builder->delete();
 		}
 	}
-	
+
 	public function saveIdentities($user_id, $identity_id, $identity_value)
-	{		
+	{
 		$userIdentities =  $this->getUserIdentities($user_id, $identity_id);
-		
+
 		if($userIdentities && $userIdentities['identity_value'] != $identity_value){
 			$builder = $this->db->table("user_identities");
 			$builder->update(['value' => $identity_value]);
@@ -166,9 +166,9 @@ class UserModel extends MyModel {
 		else{
 			$builder = $this->db->table("user_identities ");
 			$builder->insert(["identity_id" => $identity_id, "user_id" => $user_id , "identity_value" => $identity_value ]);
-		}		
+		}
 	}
-	
+
 	public function saveAddress($user_id, $line1, $line2, $district, $state, $country, $pincode)
 	{
 		$userAddressArray = ["user_id" => $user_id, "line1" => $line1, "line2" => $line2, "district" => $district, "state" => $state, "country" => $country, "pincode" => $pincode];
@@ -177,9 +177,9 @@ class UserModel extends MyModel {
 		$builder->where($userAddressArray);
 		$query = $builder->get();
 		$userAddress =  $query->getFirstRow('array');
-		
+
 		if($userAddress){
-			return $userAddress['id'];			
+			return $userAddress['id'];
 		}
 		else{
 			$builder = $this->db->table("address ");

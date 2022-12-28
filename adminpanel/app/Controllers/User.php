@@ -42,11 +42,11 @@ class User extends MyController
 				$data = $user->get($user_id);
 				$data['skills'] = array_column($user->getUserSkills($user_id), 'skill_id');
 				$identity = $user->getUserIdentities($user_id);
-				$address = $user->getUserAddress($user_id, $data['address_id']);
 				if($identity){
 					$data = array_merge($data, $identity);
 				}
-				if($address){
+				if($data['address_id']){
+					$address = $user->getUserAddress($user_id, $data['address_id']);
 					$data = array_merge($data, array_intersect_key($address, array_flip(array('line1', 'line2', 'district', 'state', 'country', 'pincode'))));
 				}
 				$this->head['title'] = "{$data['fname']} {$data['lname']} Information";
@@ -62,7 +62,7 @@ class User extends MyController
 		}
     }
 
-	public function save($user_id)
+	public function save($user_id=0)
     {
 		$newUser = !$user_id;
 		if($this->request->getMethod() === 'post')
@@ -122,6 +122,12 @@ class User extends MyController
 					}
 					$user->update($user_id,$userData);
 				}
+				#=============File Upload====================================
+				if ($path = $this->uploadFile('image', 'user')) {
+					$user->update($user_id, ['image' => $path]);
+				}
+				#============================================================
+
 				if($user_id){
 					if($this->request->getPost('skills')){
 						$user->saveSkills($user_id, $this->request->getPost('skills'));
@@ -130,7 +136,7 @@ class User extends MyController
 						$user->saveIdentities($user_id, $this->request->getPost('identity_id'), $this->request->getPost('identity_value'));
 					}
 
-					$user->saveAddress(
+					$address_id = $user->saveAddress(
 						$user_id,
 						$this->request->getPost('line1'),
 						$this->request->getPost('line2'),
@@ -139,14 +145,15 @@ class User extends MyController
 						$this->request->getPost('country'),
 						$this->request->getPost('pincode')
 					);
+					//echo $address_id;die;
+					$user->update($user_id, ['address_id' => $address_id]);
 
 					$this->setFlashMessage($newUser ? 'User created successfully.' : 'User updated successully', 'success');
 					return $this->response->redirect(site_url("user/registration/{$user_id}"));
 				}
 			}else{
-				print_r($this->validator->listErrors());die;
 				$this->setFlashMessage($this->validator->listErrors(), 'warning');
-				return $this->response->redirect(site_url('user/registration'));
+				return $this->response->redirect(site_url("user/registration/{$user_id}"));
 			}
 		}
     }

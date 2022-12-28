@@ -13,7 +13,7 @@ class MyController extends BaseController
 	public $response;
 	public $logger;
 	public $email;
-	protected $helpers = ['form', 'url', 'html', 'my', 'date'];
+	protected $helpers = ['form', 'url', 'html', 'my', 'date', 'filesystem'];
 	public $head = array(
 		"title" => "Welcome to ".APP_NAME." - India",
 		"description" => "Get details about ".APP_NAME,
@@ -24,7 +24,7 @@ class MyController extends BaseController
 		"page_name" =>APP_NAME,
 		"author" =>APP_NAME
 	);
-	
+
 	public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
         // Do Not Edit This Line
@@ -33,33 +33,33 @@ class MyController extends BaseController
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
-		$this->session = \Config\Services::session();		
-		helper($this->helpers);	
-		
+		$this->session = \Config\Services::session();
+		helper($this->helpers);
+
 		if($this->session->get('isLogin') === NULL && $this->isSecurePage()){
 			$this->setFlashMessage('Unauthorised request.', 'warning');
 			return $this->response->redirect(site_url('auth/signin'));
 			exit;
 		}
-		
+
     }
-	
+
 	private function checkSession(){
 		if(!$this->session->get('isLogin') && $this->isSecurePage()){
 			$this->setFlashMessage('Unauthorised request.', 'warning');
 			return $this->response->redirect(site_url('auth/signin'));
 		}
 	}
-	
+
 	private function isSecurePage(){
 		return class_basename(service('router')->controllerName()) != 'Auth';
 	}
-	
+
     public function publicView($page, $data = array(), $head=array(), $foot=array())
     {
        return view('_templates/header', $head).view($page, $data).view('_templates/footer', $foot);
     }
-	
+
 	public function adminView($page, $data = array(), $head=array(), $foot=array())
     {
 		   return view('_templates/header', $head)
@@ -70,18 +70,31 @@ class MyController extends BaseController
 		   .view($page, $data)
 		   .view('_templates/admin-content-wrapper-close', $data)
 		   .view('_templates/admin-layout-wrapper-close', $data)
-		   .view('_templates/footer', $foot);	   
+		   .view('_templates/footer', $foot);
     }
-	
+
+	public function uploadFile($image, $folder=null){
+		$folder??="general";
+		if ($file = $this->request->getFile($image)) {
+			if ($path = $file->store(getFolderName($folder))) {
+				//echo FCPATH.'uploads/'.dirname($path);die;
+				mkdir(FCPATH.'uploads/'.dirname($path), 0777, true);
+				rename(realpath(FCPATH.'../writable/uploads/'.$path), FCPATH.'uploads/'.$path);
+				return 'public/uploads/'.$path;
+			}
+		}
+		return false;
+	}
+
 	public function emailView($page, $data = array())
-	{		
+	{
 		$parser  = \Config\Services::parser();
 		$parser->setData($data);
 		return $parser->render('email-template/inc/email-header')
 		.$parser->render('email-template/'.$page)
 		.$parser->render('email-template/inc/email-footer');
     }
-	
+
 	public function emailData($data = array()){
 		$basicData = array(
 			'site_logo' => base_url('public/img/logo.png'),
@@ -93,7 +106,7 @@ class MyController extends BaseController
 		);
 		return array_merge($basicData, $data);
 	}
-	
+
 	public function getMessageIcon($variant){
 		$messageIconArray = array(
 			'primary' => '<i class="fa fa-check"></i>',
@@ -104,14 +117,14 @@ class MyController extends BaseController
 		);
 		return isset($messageIconArray[$variant]) ? $messageIconArray[$variant] : "";
 	}
-	
+
 	public function setFlashMessage($message, $variant="primary")
     {
        $this->session->setFlashdata('message', $message);
 	   $this->session->setFlashdata('variant', $variant);
 	   $this->session->setFlashdata('icon', $this->getMessageIcon($variant));
     }
-	
+
 	public function createEmail($to, $name, $subject=null, $message=null){
 		$this->email = \Config\Services::email();
 		$this->email->setFrom(DEFAULT_SENDER_EMAIL, DEFAULT_SENDER_NAME);

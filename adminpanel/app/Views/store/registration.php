@@ -2,7 +2,7 @@
 ?>
 <div class="card mb-4">
   <h5 class="card-header">Store Registration with details</h5>
-  <?php echo form_open_multipart('/store/save/' . $data['id'], ['class' => 'card-body']); ?>
+  <?php echo form_open_multipart('/store/save/' . intval($data['id']), ['class' => 'card-body']); ?>
   <h6>1). Account Details</h6>
   <div class="row g-3">
     <div class="col-md-4">
